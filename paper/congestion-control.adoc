@@ -1,0 +1,95 @@
+= Congestion Control
+:bibtex-file: congestion-control.bib
+//:bibtex-style: apa
+//:bibtex-style: ieee
+:bibtex-style: chicago-author-date
+:bibtex-order: alphabetical
+
+Public information about congestion control, especially links to
+research papers and descriptions of their contents
+
+== Introduction
+
+[.center,cols="1,3",width=70%]
+|===
+| Algorithm | Reference
+
+| TCP Vegas | cite:[BOP1994]
+
+| TCP Vegas | cite:[BP1995]
+
+| ? | cite:[Hoe1996]
+
+| CUBIC | cite:[HRX2008]
+
+| DCTCP | cite:[AGMPe2010]
+
+| QCN | cite:[KAYPP2010]
+
+| D3 | cite:[WBKR2011]
+
+| ? | cite:[WRGH2011]
+
+| DCTCP | cite:[AJP2011]
+
+//| HULL | cite:[AKEP2012]
+
+//| PDQ | cite:[HCG2015]
+
+//| D2TCP | cite:[VHV2012]
+
+//| ? | cite:[HCG2012]
+
+//| pFabric | cite:[AYSK2013]
+
+//| ? | cite:[WB2013]
+
+//| ? | cite:[WSB2013]
+
+//| CONGA | cite:[AEDV2014]
+
+//| FastPass | cite:[POBS2014]
+
+//| FlowBender | cite:[KVHD2014]
+
+//| pHost | cite:[GNKA2015]
+
+//| PIAS | cite:[BCCH2015]
+
+//| QJUMP | cite:[GSGW2015]
+
+//| Presto | cite:[HRAF2015]
+
+//| TIMELY | cite:[MLDB2015]
+
+//| PCC. (see also PCC Vivace paper?) | cite:[DLZG2015]
+
+//| ? | cite:[ZEFG2015]
+
+//| ? | cite:[LPJMH2015]
+
+//| Karuna | cite:[CCBA2016]
+
+//| BBR | cite:[CCGY2016]
+
+//| NDP | cite:[HRAV2017]
+
+//| ExpressPass | cite:[CJH2017]
+
+//| Hotcocoa | cite:[AGRW2017]
+
+//| ? | cite:[GAB2017]
+
+//| Homa | cite:[MLAO2018]
+
+//| Copa | cite:[AB2018]
+
+//| ? | cite:[GNCR2018]
+
+//| Pantheon | cite:[YMHR2018]
+
+|===
+
+== References
+
+bibliography::[]
