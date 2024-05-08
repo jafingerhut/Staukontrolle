@@ -1,3 +1,6 @@
+# See https://github.com/jafingerhut/learn-asciidoc/tree/main/bin for
+# one way to install AsciiDoctor on an Ubuntu Linux system.
+
 BASENAME=congestion-control
 
 #all: $(BASENAME).html $(BASENAME).pdf
