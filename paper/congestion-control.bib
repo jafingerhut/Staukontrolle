@@ -1,0 +1,180 @@
+
+
+# Andy file name:
+# 1994-brakmo-et-al-tcp-vegas-new-techniques-for-congestion-detection-and-avoidance.pdf
+@inproceedings{BOP1994,
+author = {Brakmo, Lawrence S. and O'Malley, Sean W. and Peterson, Larry L.},
+title = {TCP Vegas: new techniques for congestion detection and avoidance},
+year = {1994},
+isbn = {0897916824},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/190314.190317},
+doi = {10.1145/190314.190317},
+abstract = {Vegas is a new implementation of TCP that achieves between 40 and 70\% better throughput, with one-fifth to one-half the losses, as compared to the implementation of TCP in the Reno distribution of BSD Unix. This paper motivates and describes the three key techniques employed by Vegas, and presents the results of a comprehensive experimental performance study—using both simulations and measurements on the Internet—of the Vegas and Reno implementations of TCP.},
+booktitle = {Proceedings of the Conference on Communications Architectures, Protocols and Applications},
+pages = {24–35},
+numpages = {12},
+location = {London, United Kingdom},
+series = {SIGCOMM '94}
+}
+
+# alternate url:
+# https://cseweb.ucsd.edu/classes/wi01/cse222/papers/brakmo-vegas-jsac95.pdf
+# Andy file name:
+# 1995-brakmo-et-al-tcp-vegas-end-to-end-congestion-avoidance-on-a-global-internet.pdf
+@article{BP1995,
+  author={Brakmo, L.S. and Peterson, L.L.},
+  journal={IEEE Journal on Selected Areas in Communications}, 
+  title={TCP Vegas: end to end congestion avoidance on a global Internet}, 
+  year={1995},
+  volume={13},
+  number={8},
+  pages={1465-1480},
+  keywords={Internet;Protocols;Throughput;Testing;Bandwidth;Programmable control;Adaptive control;Jacobian matrices;Computer science;TCPIP},
+  doi={10.1109/49.464716}
+}
+
+# Andy file name:
+# 1996-hoe-improving-the-start-up-behavior-of-a-congestion-control-scheme-for-tcp.pdf
+@inproceedings{Hoe1996,
+author = {Hoe, Janey C.},
+title = {Improving the start-up behavior of a congestion control scheme for TCP},
+year = {1996},
+isbn = {0897917901},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/248156.248180},
+doi = {10.1145/248156.248180},
+abstract = {Based on experiments conducted in a network simulator and over real networks, this paper proposes changes to the congestion control scheme in current TCP implementations to improve its behavior during the start-up period of a TCP connection.The scheme, which includes Slow-start, Fast Retransmit, and Fast Recovery algorithms, uses acknowledgments from a receiver to dynamically calculate reasonable operating values for a sender's TCP parameters governing when and how much a sender can pump into the network. During the start-up period, because a TCP sender starts with default parameters, it often ends up sending too many packets and too fast, leading to multiple losses of packets from the same window. This paper shows that recovery from losses during this start-up period is often unnecessarily time-consuming.In particular, using the current Fast Retransmit algorithm, when multiple packets in the same window are lost, only one of the packet losses may be recovered by each Fast Retransmit; the rest are often recovered by Slow-start after a usually lengthy retransmission timeout. Thus, this paper proposes changes to the Fast Retransmit algorithm so that it can quickly recover from multiple packet losses without waiting unnecessarily for the timeout. These changes, tested in the simulator and on the real networks, show significant performance improvements, especially for short TCP transfers. The paper also proposes other changes to help minimize the number of packets lost during the start-up period.},
+booktitle = {Conference Proceedings on Applications, Technologies, Architectures, and Protocols for Computer Communications},
+pages = {270–280},
+numpages = {11},
+location = {Palo Alto, California, USA},
+series = {SIGCOMM '96}
+}
+
+# alternate url:
+# https://www.cs.princeton.edu/courses/archive/fall16/cos561/papers/Cubic08.pdf
+# Andy file name:
+# 2008-ha-et-al-cubic-a-new-tcp-friendly-high-speed-tcp-variant.pdf
+@article{HRX2008,
+author = {Ha, Sangtae and Rhee, Injong and Xu, Lisong},
+title = {CUBIC: a new TCP-friendly high-speed TCP variant},
+year = {2008},
+issue_date = {July 2008},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {42},
+number = {5},
+issn = {0163-5980},
+url = {https://doi.org/10.1145/1400097.1400105},
+doi = {10.1145/1400097.1400105},
+abstract = {CUBIC is a congestion control protocol for TCP (transmission control protocol) and the current default TCP algorithm in Linux. The protocol modifies the linear window growth function of existing TCP standards to be a cubic function in order to improve the scalability of TCP over fast and long distance networks. It also achieves more equitable bandwidth allocations among flows with different RTTs (round trip times) by making the window growth to be independent of RTT -- thus those flows grow their congestion window at the same rate. During steady state, CUBIC increases the window size aggressively when the window is far from the saturation point, and the slowly when it is close to the saturation point. This feature allows CUBIC to be very scalable when the bandwidth and delay product of the network is large, and at the same time, be highly stable and also fair to standard TCP flows. The implementation of CUBIC in Linux has gone through several upgrades. This paper documents its design, implementation, performance and evolution as the default TCP algorithm of Linux.},
+journal = {SIGOPS Oper. Syst. Rev.},
+month = {jul},
+pages = {64–74},
+numpages = {11}
+}
+
+# Andy file name:
+# 2010-alizadeh-et-al-data-center-tcp-dctcp.pdf
+@inproceedings{AGMP+2010,
+author = {Alizadeh, Mohammad and Greenberg, Albert and Maltz, David A. and Padhye, Jitendra and Patel, Parveen and Prabhakar, Balaji and Sengupta, Sudipta and Sridharan, Murari},
+title = {Data center TCP (DCTCP)},
+year = {2010},
+isbn = {9781450302012},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1851182.1851192},
+doi = {10.1145/1851182.1851192},
+abstract = {Cloud data centers host diverse applications, mixing workloads that require small predictable latency with others requiring large sustained throughput. In this environment, today's state-of-the-art TCP protocol falls short. We present measurements of a 6000 server production cluster and reveal impairments that lead to high application latencies, rooted in TCP's demands on the limited buffer space available in data center switches. For example, bandwidth hungry "background" flows build up queues at the switches, and thus impact the performance of latency sensitive "foreground" traffic.To address these problems, we propose DCTCP, a TCP-like protocol for data center networks. DCTCP leverages Explicit Congestion Notification (ECN) in the network to provide multi-bit feedback to the end hosts. We evaluate DCTCP at 1 and 10Gbps speeds using commodity, shallow buffered switches. We find DCTCP delivers the same or better throughput than TCP, while using 90\% less buffer space. Unlike TCP, DCTCP also provides high burst tolerance and low latency for short flows. In handling workloads derived from operational measurements, we found DCTCP enables the applications to handle 10X the current background traffic, without impacting foreground traffic. Further, a 10X increase in foreground traffic does not cause any timeouts, thus largely eliminating incast problems.},
+booktitle = {Proceedings of the ACM SIGCOMM 2010 Conference},
+pages = {63–74},
+numpages = {12},
+keywords = {data center network, TCP, ECN},
+location = {New Delhi, India},
+series = {SIGCOMM '10}
+}
+
+# alternate url:
+# https://conferences.sigcomm.org/sigcomm/2011/papers/sigcomm/p50.pdf
+# Andy file name:
+# 2011-wilson-et-al-better-never-than-late-meeting-deadlines-in-datacenter-networks.pdf
+@inproceedings{WBKR2011,
+author = {Wilson, Christo and Ballani, Hitesh and Karagiannis, Thomas and Rowtron, Ant},
+title = {Better never than late: meeting deadlines in datacenter networks},
+year = {2011},
+isbn = {9781450307970},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2018436.2018443},
+doi = {10.1145/2018436.2018443},
+abstract = {The soft real-time nature of large scale web applications in today's datacenters, combined with their distributed workflow, leads to deadlines being associated with the datacenter application traffic. A network flow is useful, and contributes to application throughput and operator revenue if, and only if, it completes within its deadline. Today's transport pro- tocols (TCP included), given their Internet origins, are agnostic to such flow deadlines. Instead, they strive to share network resources fairly. We show that this can hurt application performance.Motivated by these observations, and other (previously known) deficiencies of TCP in the datacenter environment, this paper presents the design and implementation of D3, a deadline-aware control protocol that is customized for the datacenter environment. D3 uses explicit rate control to apportion bandwidth according to flow deadlines. Evaluation from a 19-node, two-tier datacenter testbed shows that D3, even without any deadline information, easily outper- forms TCP in terms of short flow latency and burst tolerance. Further, by utilizing deadline information, D3 effectively doubles the peak load that the datacenter network cansupport.},
+booktitle = {Proceedings of the ACM SIGCOMM 2011 Conference},
+pages = {50–61},
+numpages = {12},
+keywords = {sla, rate control, online services, deadline, datacenter},
+location = {Toronto, Ontario, Canada},
+series = {SIGCOMM '11}
+}
+
+# alternate url:
+# https://www.usenix.org/legacy/events/nsdi11/tech/full_papers/Wischik.pdf
+# Andy file name:
+# todo
+@inproceedings{WRGH2011,
+author = {Wischik, Damon and Raiciu, Costin and Greenhalgh, Adam and Handley, Mark},
+title = {Design, implementation and evaluation of congestion control for multipath TCP},
+year = {2011},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Multipath TCP, as proposed by the IETF working group mptcp, allows a single data stream to be split across multiple paths. This has obvious benefits for reliability, and it can also lead to more efficient use of networked resources. We describe the design of a multipath congestion control algorithm, we implement it in Linux, and we evaluate it for multihomed servers, data centers and mobile clients. We show that some 'obvious' solutions for multipath congestion control can be harmful, but that our algorithm improves throughput and fairness compared to single-path TCP. Our algorithmis a drop-in replacement for TCP, and we believe it is safe to deploy.},
+booktitle = {Proceedings of the 8th USENIX Conference on Networked Systems Design and Implementation},
+pages = {99–112},
+numpages = {14},
+location = {Boston, MA},
+series = {NSDI'11}
+}
+
+# alternate url:
+# https://web.stanford.edu/~balaji/papers/11analysisof.pdf
+# Andy file name:
+# 2011-alizadeh-et-al-analysis-of-dctcp-stability-convergence-and-fairness.pdf
+@inproceedings{AJP2011,
+author = {Alizadeh, Mohammad and Javanmard, Adel and Prabhakar, Balaji},
+title = {Analysis of DCTCP: stability, convergence, and fairness},
+year = {2011},
+isbn = {9781450308144},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1993744.1993753},
+doi = {10.1145/1993744.1993753},
+abstract = {Cloud computing, social networking and information networks (for search, news feeds, etc) are driving interest in the deployment of large data centers. TCP is the dominant Layer 3 transport protocol in these networks. However, the operating conditions---very high bandwidth links, low round-trip times, small-buffered switches---and traffic patterns cause TCP to perform very poorly. The Data Center TCP (DCTCP) algorithm has recently been proposed as a TCP variant for data centers and addresses these shortcomings.In this paper, we provide a mathematical analysis of DCTCP. We develop a fluid model of DCTCP and use it to analyze the throughput and delay performance of the algorithm, as a function of the design parameters and of network conditions like link speeds, round-trip times and the number of active flows. Unlike fluid model representations of standard congestion control loops, the DCTCP fluid model exhibits limit cycle behavior. Therefore, it is not amenable to analysis by linearization around a fixed point and we undertake a direct analysis of the limit cycles, proving their stability. Using a hybrid (continuous- and discrete-time) model, we analyze the convergence of DCTCP sources to their fair share, obtaining an explicit characterization of the convergence rate. Finally, we investigate the "RTT-fairness" of DCTCP; i.e., the rate obtained by DCTCP sources as a function of their RTTs. We find a very simple change to DCTCP which is suggested by the fluid model and which significantly improves DCTCP's RTT-fairness. We corroborate our results with ns2 simulations.},
+booktitle = {Proceedings of the ACM SIGMETRICS Joint International Conference on Measurement and Modeling of Computer Systems},
+pages = {73–84},
+numpages = {12},
+keywords = {data center network, congestion control, analysis, TCP},
+location = {San Jose, California, USA},
+series = {SIGMETRICS '11}
+}
+
+# alternate url:
+# https://people.csail.mit.edu/alizadeh/papers/afqcn-hoti10.pdf
+# Andy file name:
+# 2010-kabbani-et-al-af-qcn-approximate-fairness-with-quantized-congestion-notification-for-multi-tenanted-data-centers.pdf
+@inproceedings{KAYPP2010,
+author = {Kabbani, Abdul and Alizadeh, Mohammad and Yasuda, Masato and Pan, Rong and Prabhakar, Balaji},
+title = {AF-QCN: Approximate Fairness with Quantized Congestion Notification for Multi-tenanted Data Centers},
+year = {2010},
+isbn = {9780769542089},
+publisher = {IEEE Computer Society},
+address = {USA},
+url = {https://doi.org/10.1109/HOTI.2010.26},
+doi = {10.1109/HOTI.2010.26},
+abstract = {Data Center Networks represent the convergence of computing and networking, of data and storage networks, and of packet transport mechanisms in Layers 2 and 3. Congestion control algorithms are a key component of data transport in this type of network. Recently, a Layer 2 congestion management algorithm, called QCN (Quantized Congestion Notification), has been adopted for the IEEE 802.1 Data Center Bridging standard: IEEE 802.1Qau. The QCN algorithm has been designed to be stable, responsive, and simple to implement. However, it does not provide weighted fairness, where the weights can be set by the operator on a per-flow or per-class basis. Such a feature can be very useful in multi-tenanted Cloud Computing and Data Center environments. This paper addresses this issue. Specifically, we develop an algorithm, called AF-QCN (for Approximately Fair QCN), which ensures a faster convergence to fairness than QCN, maintains this fairness at fine-grained time scales, and provides programmable weighted fair bandwidth shares to flows/flow-classes. It combines the QCN algorithm developed by some of the authors of this paper, and the AFD algorithm previously developed by Pan et. al. AF-QCN requires no modifications to a QCN source (Reaction Point) and introduces a very light-weight addition to a QCNcapable switch (Congestion Point). The results obtained through simulations and an FPGA implementation on a 1Gbps platform show that AF-QCN retains the good congestion management performance of QCN while achieving rapid and programmable (approximate) weighted fairness.},
+booktitle = {Proceedings of the 2010 18th IEEE Symposium on High Performance Interconnects},
+pages = {58–65},
+numpages = {8},
+series = {HOTI '10}
+}
