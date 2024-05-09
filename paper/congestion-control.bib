@@ -178,3 +178,324 @@ pages = {58–65},
 numpages = {8},
 series = {HOTI '10}
 }
+
+# alternate url
+# https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final187.pdf
+# Andy file name:
+# 2012-alizadeh-et-al-less-is-more-trading-a-little-bandwidth-for-ultra-low-latency-in-the-data-center.pdf
+@inproceedings{AKEPe2012,
+author = {Alizadeh, Mohammad and Kabbani, Abdul and Edsall, Tom and Prabhakar, Balaji and Vahdat, Amin and Yasuda, Masato},
+title = {Less is more: trading a little bandwidth for ultra-low latency in the data center},
+year = {2012},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Traditional measures of network goodness--goodput, quality of service, fairness--are expressed in terms of bandwidth. Network latency has rarely been a primary concern because delivering the highest level of bandwidth essentially entails driving up latency--at the mean and, especially, at the tail. Recently, however, there has been renewed interest in latency as a primary metric for mainstream applications. In this paper, we present the HULL (High-bandwidth Ultra-Low Latency) architecture to balance two seemingly contradictory goals: near baseline fabric latency and high bandwidth utilization. HULL leaves 'bandwidth headroom' using Phantom Queues that deliver congestion signals before network links are fully utilized and queues form at switches. By capping utilization at less than link capacity, we leave room for latency sensitive traffic to avoid buffering and the associated large delays. At the same time, we use DCTCP, a recently proposed congestion control algorithm, to adaptively respond to congestion and to mitigate the bandwidth penalties which arise from operating in a bufferless fashion. HULL further employs packet pacing to counter burstiness caused by Interrupt Coalescing and Large Send Offloading. Our implementation and simulation results show that by sacrificing a small amount (e.g., 10\%) of bandwidth, HULL can dramatically reduce average and tail latencies in the data center.},
+booktitle = {Proceedings of the 9th USENIX Conference on Networked Systems Design and Implementation},
+pages = {19},
+numpages = {1},
+location = {San Jose, CA},
+series = {NSDI'12}
+}
+
+# Andy file name:
+# 2012-hong-et-al-finishing-flows-quickly-with-preemptive-scheduling.pdf
+@inproceedings{HCG2012,
+author = {Hong, Chi-Yao and Caesar, Matthew and Godfrey, P. Brighten},
+title = {Finishing flows quickly with preemptive scheduling},
+year = {2012},
+isbn = {9781450314190},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2342356.2342389},
+doi = {10.1145/2342356.2342389},
+abstract = {Today's data centers face extreme challenges in providing low latency. However, fair sharing, a principle commonly adopted in current congestion control protocols, is far from optimal for satisfying latency requirements.We propose Preemptive Distributed Quick (PDQ) flow scheduling, a protocol designed to complete flows quickly and meet flow deadlines. PDQ enables flow preemption to approximate a range of scheduling disciplines. For example, PDQ can emulate a shortest job first algorithm to give priority to the short flows by pausing the contending flows. PDQ borrows ideas from centralized scheduling disciplines and implements them in a fully distributed manner, making it scalable to today's data centers. Further, we develop a multipath version of PDQ to exploit path diversity.Through extensive packet-level and flow-level simulation, we demonstrate that PDQ significantly outperforms TCP, RCP and D3 in data center environments. We further show that PDQ is stable, resilient to packet loss, and preserves nearly all its performance gains even given inaccurate flow information.},
+booktitle = {Proceedings of the ACM SIGCOMM 2012 Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication},
+pages = {127–138},
+numpages = {12},
+keywords = {data center, deadline, flow scheduling},
+location = {Helsinki, Finland},
+series = {SIGCOMM '12}
+}
+
+# Andy file name:
+# 2012-vamanan-et-al-deadline-aware-datacenter-tc-d2tcp.pdf
+@inproceedings{VHV2012,
+author = {Vamanan, Balajee and Hasan, Jahangir and Vijaykumar, T.N.},
+title = {Deadline-aware datacenter tcp (D2TCP)},
+year = {2012},
+isbn = {9781450314190},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2342356.2342388},
+doi = {10.1145/2342356.2342388},
+abstract = {An important class of datacenter applications, called Online Data-Intensive (OLDI) applications, includes Web search, online retail, and advertisement. To achieve good user experience, OLDI applications operate under soft-real-time constraints (e.g., 300 ms latency) which imply deadlines for network communication within the applications. Further, OLDI applications typically employ tree-based algorithms which, in the common case, result in bursts of children-to-parent traffic with tight deadlines. Recent work on datacenter network protocols is either deadline-agnostic (DCTCP) or is deadline-aware (D3) but suffers under bursts due to race conditions. Further, D3 has the practical drawbacks of requiring changes to the switch hardware and not being able to coexist with legacy TCP. We propose Deadline-Aware Datacenter TCP (D2TCP), a novel transport protocol, which handles bursts, is deadline-aware, and is readily deployable. In designing D2TCP, we make two contributions: (1) D2TCP uses a distributed and reactive approach for bandwidth allocation which fundamentally enables D2TCP's properties. (2) D2TCP employs a novel congestion avoidance algorithm, which uses ECN feedback and deadlines to modulate the congestion window via a gamma-correction function. Using a small-scale implementation and at-scale simulations, we show that D2TCP reduces the fraction of missed deadlines compared to DCTCP and D3 by 75\% and 50\%, respectively.},
+booktitle = {Proceedings of the ACM SIGCOMM 2012 Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication},
+pages = {115–126},
+numpages = {12},
+keywords = {cloud services, datacenter, deadline, ecn, oldi, sla, tcp},
+location = {Helsinki, Finland},
+series = {SIGCOMM '12}
+}
+
+# alternate url
+# https://web.stanford.edu/~skatti/pubs/sigcomm13-pfabric.pdf
+# Andy file name:
+# 2013-alizadeh-et-al-pfabric-minimal-near-optimal-datacenter-transport.pdf
+@inproceedings{AYSKe2013,
+author = {Alizadeh, Mohammad and Yang, Shuang and Sharif, Milad and Katti, Sachin and McKeown, Nick and Prabhakar, Balaji and Shenker, Scott},
+title = {pFabric: minimal near-optimal datacenter transport},
+year = {2013},
+isbn = {9781450320566},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2486001.2486031},
+doi = {10.1145/2486001.2486031},
+abstract = {In this paper we present pFabric, a minimalistic datacenter transport design that provides near theoretically optimal flow completion times even at the 99th percentile for short flows, while still minimizing average flow completion time for long flows. Moreover, pFabric delivers this performance with a very simple design that is based on a key conceptual insight: datacenter transport should decouple flow scheduling from rate control. For flow scheduling, packets carry a single priority number set independently by each flow; switches have very small buffers and implement a very simple priority-based scheduling/dropping mechanism. Rate control is also correspondingly simpler; flows start at line rate and throttle back only under high and persistent packet loss. We provide theoretical intuition and show via extensive simulations that the combination of these two simple mechanisms is sufficient to provide near-optimal performance.},
+booktitle = {Proceedings of the ACM SIGCOMM 2013 Conference on SIGCOMM},
+pages = {435–446},
+numpages = {12},
+keywords = {datacenter network, flow scheduling, packet transport},
+location = {Hong Kong, China},
+series = {SIGCOMM '13}
+}
+
+# alternate url
+# https://2022-cs244.github.io/papers/L15-TCP-ex-machina.pdf
+# Andy file name:
+# 2013-winstein-et-al-tcp-ex-machina-computer-generated-congestion-control.pdf
+@inproceedings{WB2013,
+author = {Winstein, Keith and Balakrishnan, Hari},
+title = {TCP ex machina: computer-generated congestion control},
+year = {2013},
+isbn = {9781450320566},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2486001.2486020},
+doi = {10.1145/2486001.2486020},
+abstract = {This paper describes a new approach to end-to-end congestion control on a multi-user network. Rather than manually formulate each endpoint's reaction to congestion signals, as in traditional protocols, we developed a program called Remy that generates congestion-control algorithms to run at the endpoints.In this approach, the protocol designer specifies their prior knowledge or assumptions about the network and an objective that the algorithm will try to achieve, e.g., high throughput and low queueing delay. Remy then produces a distributed algorithm---the control rules for the independent endpoints---that tries to achieve this objective.In simulations with ns-2, Remy-generated algorithms outperformed human-designed end-to-end techniques, including TCP Cubic, Compound, and Vegas. In many cases, Remy's algorithms also outperformed methods that require intrusive in-network changes, including XCP and Cubic-over-sfqCoDel (stochastic fair queueing with CoDel for active queue management). Remy can generate algorithms both for networks where some parameters are known tightly a priori, e.g. datacenters, and for networks where prior knowledge is less precise, such as cellular networks. We characterize the sensitivity of the resulting performance to the specificity of the prior knowledge, and the consequences when real-world conditions contradict the assumptions supplied at design-time.},
+booktitle = {Proceedings of the ACM SIGCOMM 2013 Conference on SIGCOMM},
+pages = {123–134},
+numpages = {12},
+keywords = {computer-designed algorithms, congestion control},
+location = {Hong Kong, China},
+series = {SIGCOMM '13}
+}
+
+# Andy file name:
+# 2013-winstein-et-al-stochastic-forecasts-achieve-high-throughput-and-low-delay-over-cellular-networks.pdf
+@inproceedings{WSB2013,
+author = {Winstein, Keith and Sivaraman, Anirudh and Balakrishnan, Hari},
+title = {Stochastic forecasts achieve high throughput and low delay over cellular networks},
+year = {2013},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Sprout is an end-to-end transport protocol for interactive applications that desire high throughput and low delay. Sprout works well over cellular wireless networks, where link speeds change dramatically with time, and current protocols build up multi-second queues in network gateways. Sprout does not use TCP-style reactive congestion control; instead the receiver observes the packet arrival times to infer the uncertain dynamics of the network path. This inference is used to forecast how many bytes may be sent by the sender, while bounding the risk that packets will be delayed inside the network for too long.In evaluations on traces from four commercial LTE and 3G networks, Sprout, compared with Skype, reduced self-inflicted end-to-end delay by a factor of 7.9 and achieved 2.2\texttimes{} the transmitted bit rate on average. Compared with Google's Hangout, Sprout reduced delay by a factor of 7.2 while achieving 4.4\texttimes{} the bit rate, and compared with Apple's Facetime, Sprout reduced delay by a factor of 8.7 with 1.9\texttimes{} the bit rate.Although it is end-to-end, Sprout matched or outperformed TCP Cubic running over the CoDel active queue management algorithm, which requires changes to cellular carrier equipment to deploy. We also tested Sprout as a tunnel to carry competing interactive and bulk traffic (Skype and TCP Cubic), and found that Sprout was able to isolate client application flows from one another.},
+booktitle = {Proceedings of the 10th USENIX Conference on Networked Systems Design and Implementation},
+pages = {459–472},
+numpages = {14},
+location = {Lombard, IL},
+series = {nsdi'13}
+}
+
+# alternate url
+# https://people.csail.mit.edu/alizadeh/papers/conga-sigcomm14.pdf
+# Andy file name:
+# 2014-alizadeh-et-al-conga-distributed-congestion-aware-load-balancing-for-datacenters.pdf
+@inproceedings{AEDVe2014,
+author = {Alizadeh, Mohammad and Edsall, Tom and Dharmapurikar, Sarang and Vaidyanathan, Ramanan and Chu, Kevin and Fingerhut, Andy and Lam, Vinh The and Matus, Francis and Pan, Rong and Yadav, Navindra and Varghese, George},
+title = {CONGA: distributed congestion-aware load balancing for datacenters},
+year = {2014},
+isbn = {9781450328364},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2619239.2626316},
+doi = {10.1145/2619239.2626316},
+abstract = {We present the design, implementation, and evaluation of CONGA, a network-based distributed congestion-aware load balancing mechanism for datacenters. CONGA exploits recent trends including the use of regular Clos topologies and overlays for network virtualization. It splits TCP flows into flowlets, estimates real-time congestion on fabric paths, and allocates flowlets to paths based on feedback from remote switches. This enables CONGA to efficiently balance load and seamlessly handle asymmetry, without requiring any TCP modifications. CONGA has been implemented in custom ASICs as part of a new datacenter fabric. In testbed experiments, CONGA has 5x better flow completion times than ECMP even with a single link failure and achieves 2-8x better throughput than MPTCP in Incast scenarios. Further, the Price of Anarchy for CONGA is provably small in Leaf-Spine topologies; hence CONGA is nearly as effective as a centralized scheduler while being able to react to congestion in microseconds. Our main thesis is that datacenter fabric load balancing is best done in the network, and requires global schemes such as CONGA to handle asymmetry.},
+booktitle = {Proceedings of the 2014 ACM Conference on SIGCOMM},
+pages = {503–514},
+numpages = {12},
+keywords = {datacenter fabric, distributed, load balancing},
+location = {Chicago, Illinois, USA},
+series = {SIGCOMM '14}
+}
+
+# alternate url
+# http://fastpass.mit.edu/Fastpass-SIGCOMM14-Perry.pdf
+# Andy file name:
+# 2014-perry-et-al-fastpass-a-centralized-zero-queue-datacenter-network.pdf
+@inproceedings{POBSF2014,
+author = {Perry, Jonathan and Ousterhout, Amy and Balakrishnan, Hari and Shah, Devavrat and Fugal, Hans},
+title = {Fastpass: a centralized "zero-queue" datacenter network},
+year = {2014},
+isbn = {9781450328364},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2619239.2626309},
+doi = {10.1145/2619239.2626309},
+abstract = {An ideal datacenter network should provide several properties, including low median and tail latency, high utilization (throughput), fair allocation of network resources between users or applications, deadline-aware scheduling, and congestion (loss) avoidance. Current datacenter networks inherit the principles that went into the design of the Internet, where packet transmission and path selection decisions are distributed among the endpoints and routers. Instead, we propose that each sender should delegate control---to a centralized arbiter---of when each packet should be transmitted and what path it should follow.This paper describes Fastpass, a datacenter network architecture built using this principle. Fastpass incorporates two fast algorithms: the first determines the time at which each packet should be transmitted, while the second determines the path to use for that packet. In addition, Fastpass uses an efficient protocol between the endpoints and the arbiter and an arbiter replication strategy for fault-tolerant failover. We deployed and evaluated Fastpass in a portion of Facebook's datacenter network. Our results show that Fastpass achieves high throughput comparable to current networks at a 240x reduction is queue lengths (4.35 Mbytes reducing to 18 Kbytes), achieves much fairer and consistent flow throughputs than the baseline TCP (5200x reduction in the standard deviation of per-flow throughput with five concurrent connections), scalability from 1 to 8 cores in the arbiter implementation with the ability to schedule 2.21 Terabits/s of traffic in software on eight cores, and a 2.5x reduction in the number of TCP retransmissions in a latency-sensitive service at Facebook.},
+booktitle = {Proceedings of the 2014 ACM Conference on SIGCOMM},
+pages = {307–318},
+numpages = {12},
+keywords = {zero-queue, scheduling, low latency, high throughput, datacenter, data plane, centralized, arbiter},
+location = {Chicago, Illinois, USA},
+series = {SIGCOMM '14}
+}
+
+# Andy file name:
+# 2014-kabbani-et-al-flowbender-flow-level-adaptive-routing-for-improved-latency-and-throughput-in-datacenter-networks.pdf
+@inproceedings{KVHD2014,
+author = {Kabbani, Abdul and Vamanan, Balajee and Hasan, Jahangir and Duchene, Fabien},
+title = {FlowBender: Flow-level Adaptive Routing for Improved Latency and Throughput in Datacenter Networks},
+year = {2014},
+isbn = {9781450332798},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2674005.2674985},
+doi = {10.1145/2674005.2674985},
+abstract = {Datacenter networks provide high path diversity for traffic between machines. Load balancing traffic across these paths is important for both, latency- and throughput-sensitive applications. The standard load balancing techniques used today obliviously hash a flow to a random path. When long flows collide on the same path, this might lead to long lasting congestion while other paths could be underutilized, degrading performance of other flows as well. Recent proposals to address this shortcoming incur significant implementation complexity at the host that would actually slow down short flows (MPTCP), depend on relatively slow centralized controllers for rerouting large congesting flows (Hedera), or require custom switch hardware, hindering near-term deployment (DeTail).We propose FlowBender, a novel technique that: (1) Load balances distributively at the granularity of flows instead of packets, avoiding excessive packet reordering. (2) Uses end-host-driven rehashing to trigger dynamic flow-to-path assignment. (3) Recovers from link failures within a Retransmit Timeout (RTO). (4) Amounts to less than 50 lines of critical kernel code and is readily deployable in commodity data centers today. (5) Is very robust and simple to tune. We evaluate FlowBender using both simulations and a real testbed implementation, and show that it improves average and tail latencies significantly compared to state of the art techniques without incurring the significant overhead and complexity of other load balancing schemes.},
+booktitle = {Proceedings of the 10th ACM International on Conference on Emerging Networking Experiments and Technologies},
+pages = {149–160},
+numpages = {12},
+keywords = {tcp, load balancing, ecmp, data centers},
+location = {Sydney, Australia},
+series = {CoNEXT '14}
+}
+
+# alternate url
+# https://conferences2.sigcomm.org/co-next/2015/img/papers/conext15-final1.pdf
+# Andy file name:
+# 2015-gao-et-al-phost-distributed-near-optimal-datacenter-transport-over-commodity-network-fabric.pdf
+@inproceedings{GNKAe2015,
+author = {Gao, Peter X. and Narayan, Akshay and Kumar, Gautam and Agarwal, Rachit and Ratnasamy, Sylvia and Shenker, Scott},
+title = {pHost: distributed near-optimal datacenter transport over commodity network fabric},
+year = {2015},
+isbn = {9781450334129},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2716281.2836086},
+doi = {10.1145/2716281.2836086},
+abstract = {The importance of minimizing flow completion times (FCT) in datacenters has led to a growing literature on new network transport designs. Of particular note is pFabric, a protocol that achieves near-optimal FCTs. However, pFabric's performance comes at the cost of generality, since pFabric requires specialized hardware that embeds a specific scheduling policy within the network fabric, making it hard to meet diverse policy goals. Aiming for generality, the recent Fastpass proposal returns to a design based on commodity network hardware and instead relies on a centralized scheduler. Fastpass achieves generality, but (as we show) loses many of pFabric's performance benefits.We present pHost, a new transport design aimed at achieving both: the near-optimal performance of pFabric and the commodity network design of Fastpass. Similar to Fastpass, pHost keeps the network simple by decoupling the network fabric from scheduling decisions. However, pHost introduces a new distributed protocol that allows end-hosts to directly make scheduling decisions, thus avoiding the overheads of Fastpass's centralized scheduler architecture. We show that pHost achieves performance on par with pFabric (within 4\% for typical conditions) and significantly outperforms Fastpass (by a factor of 3.8\texttimes{}) while relying only on commodity network hardware.},
+booktitle = {Proceedings of the 11th ACM Conference on Emerging Networking Experiments and Technologies},
+articleno = {1},
+numpages = {12},
+keywords = {packet transport, flow scheduling, datacenter network},
+location = {Heidelberg, Germany},
+series = {CoNEXT '15}
+}
+
+# Andy file name:
+# 2015-bai-et-al-information-agnostic-flow-scheduling-for-commodity-data-centers.pdf
+@inproceedings{BCCHe2015,
+author = {Bai, Wei and Chen, Li and Chen, Kai and Han, Dongsu and Tian, Chen and Wang, Hao},
+title = {Information-agnostic flow scheduling for commodity data centers},
+year = {2015},
+isbn = {9781931971218},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Many existing data center network (DCN) flow scheduling schemes minimize flow completion times (FCT) based on prior knowledge of flows and custom switch functions, making them superior in performance but hard to use in practice. By contrast, we seek to minimize FCT with no prior knowledge and existing commodity switch hardware.To this end, we present PIAS, a DCN flow scheduling mechanism that aims to minimize FCT by mimicking Shortest Job First (SJF) on the premise that flow size is not known a priori. At its heart, PIAS leverages multiple priority queues available in existing commodity switches to implement a Multiple Level Feedback Queue (MLFQ), in which a PIAS flow is gradually demoted from higher-priority queues to lower-priority queues based on the number of bytes it has sent. As a result, short flows are likely to be finished in the first few high-priority queues and thus be prioritized over long flows in general, which enables PIAS to emulate SJF without knowing flow sizes beforehand.We have implemented a PIAS prototype and evaluated PIAS through both testbed experiments and ns- 2 simulations. We show that PIAS is readily deployable with commodity switches and backward compatible with legacy TCP/IP stacks. Our evaluation results show that PIAS significantly outperforms existing information-agnostic schemes. For example, it reduces FCT by up to 50\% and 40\% over DCTCP [11] and L2DCT [27] respectively; and it only has a 4.9\% performance gap to an ideal information-aware scheme, pFabric [13], for short flows under a production DCN workload.},
+booktitle = {Proceedings of the 12th USENIX Conference on Networked Systems Design and Implementation},
+pages = {455–468},
+numpages = {14},
+location = {Oakland, CA},
+series = {NSDI'15}
+}
+
+# Andy file name:
+# 2015-grosvenor-et-al-queues-dont-matter-when-you-can-jump-them.pdf
+@inproceedings{GSGWe2015,
+author = {Grosvenor, Matthew P. and Schwarzkopf, Malte and Gog, Ionel and Watson, Robert N. M. and Moore, Andrew W. and Hand, Steven and Crowcroft, Jon},
+title = {Queues don't matter when you can JUMP them!},
+year = {2015},
+isbn = {9781931971218},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {QJUMP is a simple and immediately deployable approach to controlling network interference in datacenter networks. Network interference occurs when congestion from throughput-intensive applications causes queueing that delays traffic from latency-sensitive applications. To mitigate network interference, QJUMP applies Internet QoS-inspired techniques to datacenter applications. Each application is assigned to a latency sensitivity level (or class). Packets from higher levels are rate-limited in the end host, but once allowed into the network can "jump-the-queue" over packets from lower levels. In settings with known node counts and link speeds, QJUMP can support service levels ranging from strictly bounded latency (but with low rate) through to line-rate throughput (but with high latency variance).We have implemented QJUMP as a Linux Traffic Control module. We show that QJUMP achieves bounded latency and reduces in-network interference by up to 300\texttimes{}, outperforming Ethernet Flow Control (802.3x), ECN (WRED) and DCTCP. We also show that QJUMP improves average flow completion times, performing close to or better than DCTCP and pFabric.},
+booktitle = {Proceedings of the 12th USENIX Conference on Networked Systems Design and Implementation},
+pages = {1–14},
+numpages = {14},
+location = {Oakland, CA},
+series = {NSDI'15}
+}
+
+# alternate url
+# https://conferences.sigcomm.org/sigcomm/2015/pdf/papers/p465.pdf
+# Andy file name:
+# 2015-he-et-al-presto-edge-based-load-balancing-for-fast-datacenter-networks.pdf
+@inproceedings{HRAFe2015,
+author = {He, Keqiang and Rozner, Eric and Agarwal, Kanak and Felter, Wes and Carter, John and Akella, Aditya},
+title = {Presto: Edge-based Load Balancing for Fast Datacenter Networks},
+year = {2015},
+isbn = {9781450335423},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2785956.2787507},
+doi = {10.1145/2785956.2787507},
+abstract = {Datacenter networks deal with a variety of workloads, ranging from latency-sensitive small flows to bandwidth-hungry large flows. Load balancing schemes based on flow hashing, e.g., ECMP, cause congestion when hash collisions occur and can perform poorly in asymmetric topologies. Recent proposals to load balance the network require centralized traffic engineering, multipath-aware transport, or expensive specialized hardware. We propose a mechanism that avoids these limitations by (i) pushing load-balancing functionality into the soft network edge (e.g., virtual switches) such that no changes are required in the transport layer, customer VMs, or networking hardware, and (ii) load balancing on fine-grained, near-uniform units of data (flowcells) that fit within end-host segment offload optimizations used to support fast networking speeds. We design and implement such a soft-edge load balancing scheme, called Presto, and evaluate it on a 10 Gbps physical testbed. We demonstrate the computational impact of packet reordering on receivers and propose a mechanism to handle reordering in the TCP receive offload functionality. Presto's performance closely tracks that of a single, non-blocking switch over many workloads and is adaptive to failures and topology asymmetry.},
+booktitle = {Proceedings of the 2015 ACM Conference on Special Interest Group on Data Communication},
+pages = {465–478},
+numpages = {14},
+keywords = {load balancing, software-defined networking},
+location = {London, United Kingdom},
+series = {SIGCOMM '15}
+}
+
+# Andy file name:
+# 2015-mittal-et-al-timely-rtt-based-congestion-control-for-the-datacenter.pdf
+@inproceedings{MLDBe2015,
+author = {Mittal, Radhika and Lam, Vinh The and Dukkipati, Nandita and Blem, Emily and Wassel, Hassan and Ghobadi, Monia and Vahdat, Amin and Wang, Yaogong and Wetherall, David and Zats, David},
+title = {TIMELY: RTT-based Congestion Control for the Datacenter},
+year = {2015},
+isbn = {9781450335423},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2785956.2787510},
+doi = {10.1145/2785956.2787510},
+abstract = {Datacenter transports aim to deliver low latency messaging together with high throughput. We show that simple packet delay, measured as round-trip times at hosts, is an effective congestion signal without the need for switch feedback. First, we show that advances in NIC hardware have made RTT measurement possible with microsecond accuracy, and that these RTTs are sufficient to estimate switch queueing. Then we describe how TIMELY can adjust transmission rates using RTT gradients to keep packet latency low while delivering high bandwidth. We implement our design in host software running over NICs with OS-bypass capabilities. We show using experiments with up to hundreds of machines on a Clos network topology that it provides excellent performance: turning on TIMELY for OS-bypass messaging over a fabric with PFC lowers 99 percentile tail latency by 9X while maintaining near line-rate throughput. Our system also outperforms DCTCP running in an optimized kernel, reducing tail latency by $13$X. To the best of our knowledge, TIMELY is the first delay-based congestion control protocol for use in the datacenter, and it achieves its results despite having an order of magnitude fewer RTT signals (due to NIC offload) than earlier delay-based schemes such as Vegas.},
+booktitle = {Proceedings of the 2015 ACM Conference on Special Interest Group on Data Communication},
+pages = {537–550},
+numpages = {14},
+keywords = {rdma, os-bypass, delay-based congestion control, datacenter transport},
+location = {London, United Kingdom},
+series = {SIGCOMM '15}
+}
+
+# Andy file name:
+# 2015-dong-et-al-pcc-re-architecting-congestion-control-for-consistent-high-performance.pdf
+@inproceedings{DLZGS2015,
+author = {Dong, Mo and Li, Qingxi and Zarchy, Doron and Godfrey, P. Brighten and Schapira, Michael},
+title = {PCC: re-architecting congestion control for consistent high performance},
+year = {2015},
+isbn = {9781931971218},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {TCP and its variants have suffered from surprisingly poor performance for decades. We argue the TCP family has little hope of achieving consistent high performance due to a fundamental architectural deficiency: hardwiring packet-level events to control responses. We propose Performance-oriented Congestion Control (PCC), a new congestion control architecture in which each sender continuously observes the connection between its actions and empirically experienced performance, enabling it to consistently adopt actions that result in high performance. We prove that PCC converges to a stable and fair equilibrium. Across many real-world and challenging environments, PCC shows consistent and often 10\texttimes{} performance improvement, with better fairness and stability than TCP. PCC requires no router hardware support or new packet format.},
+booktitle = {Proceedings of the 12th USENIX Conference on Networked Systems Design and Implementation},
+pages = {395–408},
+numpages = {14},
+location = {Oakland, CA},
+series = {NSDI'15}
+}
+
+# alternate url
+# https://conferences.sigcomm.org/sigcomm/2015/pdf/papers/p523.pdf
+# Andy file name:
+# 2015-zhu-et-al-congestion-control-for-large-scale-rdma-deployments.pdf
+@inproceedings{ZEFGe2015,
+author = {Zhu, Yibo and Eran, Haggai and Firestone, Daniel and Guo, Chuanxiong and Lipshteyn, Marina and Liron, Yehonatan and Padhye, Jitendra and Raindel, Shachar and Yahia, Mohamad Haj and Zhang, Ming},
+title = {Congestion Control for Large-Scale RDMA Deployments},
+year = {2015},
+isbn = {9781450335423},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2785956.2787484},
+doi = {10.1145/2785956.2787484},
+abstract = {Modern datacenter applications demand high throughput (40Gbps) and ultra-low latency (&lt; 10 μs per hop) from the network, with low CPU overhead. Standard TCP/IP stacks cannot meet these requirements, but Remote Direct Memory Access (RDMA) can. On IP-routed datacenter networks, RDMA is deployed using RoCEv2 protocol, which relies on Priority-based Flow Control (PFC) to enable a drop-free network. However, PFC can lead to poor application performance due to problems like head-of-line blocking and unfairness. To alleviates these problems, we introduce DCQCN, an end-to-end congestion control scheme for RoCEv2. To optimize DCQCN performance, we build a fluid model, and provide guidelines for tuning switch buffer thresholds, and other protocol parameters. Using a 3-tier Clos network testbed, we show that DCQCN dramatically improves throughput and fairness of RoCEv2 RDMA traffic. DCQCN is implemented in Mellanox NICs, and is being deployed in Microsoft's datacenters.},
+booktitle = {Proceedings of the 2015 ACM Conference on Special Interest Group on Data Communication},
+pages = {523–536},
+numpages = {14},
+keywords = {datacenter transport, congestion control, RDMA, PFC, ECN},
+location = {London, United Kingdom},
+series = {SIGCOMM '15}
+}
+
+
