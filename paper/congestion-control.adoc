@@ -32,39 +32,39 @@ research papers and descriptions of their contents
 
 | DCTCP | cite:[AJP2011]
 
-| HULL | cite:[AKEP2012]
+| HULL | cite:[AKEPe2012]
 
-| PDQ | cite:[HCG2015]
+| PDQ | cite:[HCG2012]
 
 | D2TCP | cite:[VHV2012]
 
 | ? | cite:[HCG2012]
 
-| pFabric | cite:[AYSK2013]
+| pFabric | cite:[AYSKe2013]
 
 | ? | cite:[WB2013]
 
 | ? | cite:[WSB2013]
 
-| CONGA | cite:[AEDV2014]
+| CONGA | cite:[AEDVe2014]
 
-| FastPass | cite:[POBS2014]
+| FastPass | cite:[POBSF2014]
 
 | FlowBender | cite:[KVHD2014]
 
-| pHost | cite:[GNKA2015]
+| pHost | cite:[GNKAe2015]
 
-| PIAS | cite:[BCCH2015]
+| PIAS | cite:[BCCHe2015]
 
-| QJUMP | cite:[GSGW2015]
+| QJUMP | cite:[GSGWe2015]
 
-| Presto | cite:[HRAF2015]
+| Presto | cite:[HRAFe2015]
 
-| TIMELY | cite:[MLDB2015]
+| TIMELY | cite:[MLDBe2015]
 
-| PCC. (see also PCC Vivace paper?) | cite:[DLZG2015]
+| PCC. (see also PCC Vivace paper?) | cite:[DLZGS2015]
 
-| ? | cite:[ZEFG2015]
+| ? | cite:[ZEFGe2015]
 
 //| ? | cite:[LPJMH2015]
 
