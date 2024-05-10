@@ -8,6 +8,7 @@
 Public information about congestion control, especially links to
 research papers and descriptions of their contents
 
+
 == Introduction
 
 [.center,cols="1,3,3",width=100%]
@@ -82,13 +83,18 @@ research papers and descriptions of their contents
 
 | Homa | cite:[MLAO2018] |
 
-//| Copa | cite:[AB2018] |
+| Copa | cite:[AB2018] |
 
 | ? | cite:[GNCRe2018] |
 
 | Pantheon | cite:[YMHRe2018] |
 
+| ? | cite:[NCRGe2018] |
+
+| formal methods | cite:[AASAB2021] | Applies formal verification methods to some congestion control algorithms.
+
 |===
+
 
 == References
 
