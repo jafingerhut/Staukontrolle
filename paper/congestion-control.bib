@@ -498,4 +498,218 @@ location = {London, United Kingdom},
 series = {SIGCOMM '15}
 }
 
+# Andy file name:
+# 2015-lee-et-al-accurate-latency-based-congestion-feedback-for-datacenters.pdf
+@inproceedings{LPJMH2015,
+author = {Lee, Changhyun and Park, Chunjong and Jang, Keon and Moon, Sue and Han, Dongsu},
+title = {Accurate latency-based congestion feedback for datacenters},
+year = {2015},
+isbn = {9781931971225},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {The nature of congestion feedback largely governs the behavior of congestion control. In datacenter networks, where RTTs are in hundreds of microseconds, accurate feedback is crucial to achieve both high utilization and low queueing delay. Proposals for datacenter congestion control predominantly leverage ECN or even explicit in-network feedback (e.g., RCP-type feedback) to minimize the queuing delay. In this work we explore latency-based feedback as an alternative and show its advantages over ECN. Against the common belief that such implicit feed-back is noisy and inaccurate, we demonstrate that latency-based implicit feedback is accurate enough to signal a single packet's queuing delay in 10 Gbps networks.DX enables accurate queuing delay measurements whose error falls within 1.98 and 0.53 microseconds using software-based and hardware-based latency measurements, respectively. This enables us to design a new congestion control algorithm that performs fine-grained control to adjust the congestion window just enough to achieve very low queuing delay while attaining full utilization. Our extensive evaluation shows that 1) the latency measurement accurately reflects the one-way queuing delay in single packet level; 2) the latency feedback can be used to perform practical and fine-grained congestion control in high-speed datacenter networks; and 3) DX outperforms DCTCP with 5.33\texttimes{} smaller median queueing delay at 1 Gbps and 1.57\texttimes{} at 10 Gbps.},
+booktitle = {Proceedings of the 2015 USENIX Conference on Usenix Annual Technical Conference},
+pages = {403–415},
+numpages = {13},
+location = {Santa Clara, CA},
+series = {USENIX ATC '15}
+}
 
+# Andy file name:
+# 2016-chen-et-al-scheduling-mix-flows-in-commodity-datacenters-with-karuna.pdf
+@inproceedings{CCBA2016,
+author = {Chen, Li and Chen, Kai and Bai, Wei and Alizadeh, Mohammad},
+title = {Scheduling Mix-flows in Commodity Datacenters with Karuna},
+year = {2016},
+isbn = {9781450341936},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2934872.2934888},
+doi = {10.1145/2934872.2934888},
+abstract = {Cloud applications generate a mix of flows with and without deadlines. Scheduling such mix-flows is a key challenge; our experiments show that trivially combining existing schemes for deadline/non-deadline flows is problematic. For example, prioritizing deadline flows hurts flow completion time (FCT) for non-deadline flows, with minor improvement for deadline miss rate.We present Karuna, a first systematic solution for scheduling mix-flows. Our key insight is that deadline flows should meet their deadlines while minimally impacting the FCT of non-deadline flows. To achieve this goal, we design a novel Minimal-impact Congestion control Protocol (MCP) that handles deadline flows with as little bandwidth as possible. For non-deadline flows, we extend an existing FCT minimization scheme to schedule flows with known and unknown sizes. Karuna requires no switch modifications and is back- ward compatible with legacy TCP/IP stacks. Our testbed experiments and simulations show that Karuna effectively schedules mix-flows, for example, reducing the 95th percentile FCT of non-deadline flows by up to 47.78\% at high load compared to pFabric, while maintaining low (<5.8\%) deadline miss rate.},
+booktitle = {Proceedings of the 2016 ACM SIGCOMM Conference},
+pages = {174–187},
+numpages = {14},
+keywords = {Flow scheduling, Deadline, Datacenter networks},
+location = {Florianopolis, Brazil},
+series = {SIGCOMM '16}
+}
+
+# Andy file name:
+# 2016-cardwell-et-al-bbr-congestion-based-congestion-control-measuring-bottleneck-bandwidth-and-round-trip-propagation-time.pdf
+@article{CCGYJ2016,
+author = {Cardwell, Neal and Cheng, Yuchung and Gunn, C. Stephen and Yeganeh, Soheil Hassas and Jacobson, Van},
+title = {BBR: Congestion-Based Congestion Control: Measuring bottleneck bandwidth and round-trip propagation time},
+year = {2016},
+issue_date = {September-October 2016},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {14},
+number = {5},
+issn = {1542-7730},
+url = {https://doi.org/10.1145/3012426.3022184},
+doi = {10.1145/3012426.3022184},
+abstract = {When bottleneck buffers are large, loss-based congestion control keeps them full, causing bufferbloat. When bottleneck buffers are small, loss-based congestion control misinterprets loss as a signal of congestion, leading to low throughput. Fixing these problems requires an alternative to loss-based congestion control. Finding this alternative requires an understanding of where and how network congestion originates.},
+journal = {Queue},
+month = {oct},
+pages = {20–53},
+numpages = {34}
+}
+
+# Andy file name:
+# 2017-handley-et-al-re-architecting-datacenter-networks-and-stacks-for-low-latency-and-high-performance.pdf
+@inproceedings{HRAVe2017,
+author = {Handley, Mark and Raiciu, Costin and Agache, Alexandru and Voinescu, Andrei and Moore, Andrew W. and Antichi, Gianni and W\'{o}jcik, Marcin},
+title = {Re-architecting datacenter networks and stacks for low latency and high performance},
+year = {2017},
+isbn = {9781450346535},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3098822.3098825},
+doi = {10.1145/3098822.3098825},
+abstract = {Modern datacenter networks provide very high capacity via redundant Clos topologies and low switch latency, but transport protocols rarely deliver matching performance. We present NDP, a novel data-center transport architecture that achieves near-optimal completion times for short transfers and high flow throughput in a wide range of scenarios, including incast. NDP switch buffers are very shallow and when they fill the switches trim packets to headers and priority forward the headers. This gives receivers a full view of instantaneous demand from all senders, and is the basis for our novel, high-performance, multipath-aware transport protocol that can deal gracefully with massive incast events and prioritize traffic from different senders on RTT timescales. We implemented NDP in Linux hosts with DPDK, in a software switch, in a NetFPGA-based hardware switch, and in P4. We evaluate NDP's performance in our implementations and in large-scale simulations, simultaneously demonstrating support for very low-latency and high throughput.},
+booktitle = {Proceedings of the Conference of the ACM Special Interest Group on Data Communication},
+pages = {29–42},
+numpages = {14},
+keywords = {Datacenters, Network Stacks, Transport Protocols},
+location = {Los Angeles, CA, USA},
+series = {SIGCOMM '17}
+}
+
+# Andy file name:
+# 2017-cho-et-al-credit-scheduled-delay-bounded-congestion-control-for-datacenters.pdf
+@inproceedings{CJH2017,
+author = {Cho, Inho and Jang, Keon and Han, Dongsu},
+title = {Credit-Scheduled Delay-Bounded Congestion Control for Datacenters},
+year = {2017},
+isbn = {9781450346535},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3098822.3098840},
+doi = {10.1145/3098822.3098840},
+abstract = {Small RTTs (~tens of microseconds), bursty flow arrivals, and a large number of concurrent flows (thousands) in datacenters bring fundamental challenges to congestion control as they either force a flow to send at most one packet per RTT or induce a large queue build-up. The widespread use of shallow buffered switches also makes the problem more challenging with hosts generating many flows in bursts. In addition, as link speeds increase, algorithms that gradually probe for bandwidth take a long time to reach the fair-share. An ideal datacenter congestion control must provide 1) zero data loss, 2) fast convergence, 3) low buffer occupancy, and 4) high utilization. However, these requirements present conflicting goals.This paper presents a new radical approach, called ExpressPass, an end-to-end credit-scheduled, delay-bounded congestion control for datacenters. ExpressPass uses credit packets to control congestion even before sending data packets, which enables us to achieve bounded delay and fast convergence. It gracefully handles bursty flow arrivals. We implement ExpressPass using commodity switches and provide evaluations using testbed experiments and simulations. ExpressPass converges up to 80 times faster than DCTCP in 10 Gbps links, and the gap increases as link speeds become faster. It greatly improves performance under heavy incast workloads and significantly reduces the flow completion times, especially, for small and medium size flows compared to RCP, DCTCP, HULL, and DX under realistic workloads.},
+booktitle = {Proceedings of the Conference of the ACM Special Interest Group on Data Communication},
+pages = {239–252},
+numpages = {14},
+keywords = {Datacenter Network, Credit-based, Congestion Control},
+location = {Los Angeles, CA, USA},
+series = {SIGCOMM '17}
+}
+
+# Andy file name:
+# 2017-arashloo-et-al-hotcocoa-hardware-congestion-control-abstractions.pdf
+@inproceedings{AGRW2017,
+author = {Arashloo, Mina Tahmasbi and Ghobadi, Monia and Rexford, Jennifer and Walker, David},
+title = {HotCocoa: Hardware Congestion Control Abstractions},
+year = {2017},
+isbn = {9781450355698},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3152434.3152457},
+doi = {10.1145/3152434.3152457},
+abstract = {Congestion control in multi-tenant data centers is an active area of research because of its significant impact on customer experience, and, consequently, on revenue. Therefore, new algorithms and protocols are expected to emerge as the Cloud evolves. Deploying new congestion control algorithms in the end host's hypervisor allows frequent updates, but processing packets at high rates in the hypervisor and implementing the elements of a congestion control algorithm, such as traffic shapers and timestamps, in software have well-studied inaccuracies and CPU inefficiencies. In this paper, we argue for implementing the entire congestion control algorithm in programmable NICs. To do so, we identify the absence of hardware-aware programming abstractions as the most immediate challenge and solve it using a simple high-level domain specific language called HotCocoa. HotCocoa lies at a sweet spot between the ability to express a broad set of congestion control algorithms and efficient hardware implementation. It offers a set of hardware-aware COngestion COntrol Abstractions that enable operators to specify their algorithm without having to worry about low-level hardware primitives. To evaluate HotCocoa, we implement four congestion control algorithms (Reno, DCTCP, PCC, and TIMELY) and use simulations to show that HotCocoa's implementation of Reno perfectly tracks the behavior of a native implementation in C++.},
+booktitle = {Proceedings of the 16th ACM Workshop on Hot Topics in Networks},
+pages = {108–114},
+numpages = {7},
+location = {<conf-loc>, <city>Palo Alto</city>, <state>CA</state>, <country>USA</country>, </conf-loc>},
+series = {HotNets '17}
+}
+
+# Andy file name:
+# 2017-goyal-et-al-rethinking-congestion-control-for-cellular-networks.pdf
+@inproceedings{GAB2017,
+author = {Goyal, Prateesh and Alizadeh, Mohammad and Balakrishnan, Hari},
+title = {Rethinking Congestion Control for Cellular Networks},
+year = {2017},
+isbn = {9781450355698},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3152434.3152437},
+doi = {10.1145/3152434.3152437},
+abstract = {We propose Accel-Brake Control (ABC), a protocol that integrates a simple and deployable signaling scheme at cellular base stations with an endpoint mechanism to respond to these signals. The key idea is for the base station to enable each sender to achieve a computed target rate by marking each packet with an "accelerate" or "brake" notification, which causes the sender to either slightly increase or slightly reduce its congestion window. ABC is designed to rapidly acquire any capacity that opens up, a common occurrence in cellular networks, while responding promptly to congestion. It is also incrementally deployable using existing ECN infrastructure and can co-exist with legacy ECN routers. Preliminary results obtained over cellular network traces show that ABC outperforms prior approaches significantly.},
+booktitle = {Proceedings of the 16th ACM Workshop on Hot Topics in Networks},
+pages = {29–35},
+numpages = {7},
+location = {<conf-loc>, <city>Palo Alto</city>, <state>CA</state>, <country>USA</country>, </conf-loc>},
+series = {HotNets '17}
+}
+
+# Andy file name:
+# 2018-montazeri-et-al-homa-a-receiver-driven-low-latency-transport-protocol-using-network-priorities.pdf
+@inproceedings{MLAO2018,
+author = {Montazeri, Behnam and Li, Yilong and Alizadeh, Mohammad and Ousterhout, John},
+title = {Homa: a receiver-driven low-latency transport protocol using network priorities},
+year = {2018},
+isbn = {9781450355674},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3230543.3230564},
+doi = {10.1145/3230543.3230564},
+abstract = {Homa is a new transport protocol for datacenter networks. It provides exceptionally low latency, especially for workloads with a high volume of very short messages, and it also supports large messages and high network utilization. Homa uses in-network priority queues to ensure low latency for short messages; priority allocation is managed dynamically by each receiver and integrated with a receiver-driven flow control mechanism. Homa also uses controlled overcommitment of receiver downlinks to ensure efficient bandwidth utilization at high load. Our implementation of Homa delivers 99th percentile round-trip times less than 15 μs for short messages on a 10 Gbps network running at 80\% load. These latencies are almost 100x lower than the best published measurements of an implementation. In simulations, Homa's latency is roughly equal to pFabric and significantly better than pHost, PIAS, and NDP for almost all message sizes and workloads. Homa can also sustain higher network loads than pFabric, pHost, or PIAS.},
+booktitle = {Proceedings of the 2018 Conference of the ACM Special Interest Group on Data Communication},
+pages = {221–235},
+numpages = {15},
+keywords = {data centers, low latency, network stacks, transport protocols},
+location = {Budapest, Hungary},
+series = {SIGCOMM '18}
+}
+
+# Andy file name:
+# 2018-narayan-et-al-restructuring-endpoint-congestion-control.pdf
+@inproceedings{NCRGe2018,
+author = {Narayan, Akshay and Cangialosi, Frank and Raghavan, Deepti and Goyal, Prateesh and Narayana, Srinivas and Mittal, Radhika and Alizadeh, Mohammad and Balakrishnan, Hari},
+title = {Restructuring endpoint congestion control},
+year = {2018},
+isbn = {9781450355674},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3230543.3230553},
+doi = {10.1145/3230543.3230553},
+abstract = {This paper describes the implementation and evaluation of a system to implement complex congestion control functions by placing them in a separate agent outside the datapath. Each datapath---such as the Linux kernel TCP, UDP-based QUIC, or kernel-bypass transports like mTCP-on-DPDK---summarizes information about packet round-trip times, receptions, losses, and ECN via a well-defined interface to algorithms running in the off-datapath Congestion Control Plane (CCP). The algorithms use this information to control the datapath's congestion window or pacing rate. Algorithms written in CCP can run on multiple datapaths. CCP improves both the pace of development and ease of maintenance of congestion control algorithms by providing better, modular abstractions, and supports aggregation capabilities of the Congestion Manager, all with one-time changes to datapaths. CCP also enables new capabilities, such as Copa in Linux TCP, several algorithms running on QUIC and mTCP/DPDK, and the use of signal processing algorithms to detect whether cross-traffic is ACK-clocked. Experiments with our user-level Linux CCP implementation show that CCP algorithms behave similarly to kernel algorithms, and incur modest CPU overhead of a few percent.},
+booktitle = {Proceedings of the 2018 Conference of the ACM Special Interest Group on Data Communication},
+pages = {30–43},
+numpages = {14},
+keywords = {operating systems, congestion control},
+location = {Budapest, Hungary},
+series = {SIGCOMM '18}
+}
+
+# alternate url
+# https://dspace.mit.edu/bitstream/handle/1721.1/137381/1802.08730.pdf
+# Andy file name:
+# 2018-goyal-et-al-elasticity-detection-a-building-block-for-delay-sensitive-congestion-control.pdf
+@inproceedings{GNCRe2018,
+author = {Goyal, Prateesh and Narayan, Akshay and Cangialosi, Frank and Raghavan, Deepti and Narayana, Srinivas and Alizadeh, Mohammad and Balakrishnan, Hari},
+title = {Elasticity Detection: A Building Block for Delay-Sensitive Congestion Control},
+year = {2018},
+isbn = {9781450355858},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3232755.3232772},
+doi = {10.1145/3232755.3232772},
+abstract = {This paper develops a technique to detect whether the cross traffic competing with a flow is elastic or not, and shows how to use the elasticity detector to improve congestion control. If the cross traffic is elastic, i.e., made up of buffer-filling flows like Cubic or Reno, then one should use a scheme that competes well with such traffic. Such a scheme will not be able to control delays because the cross traffic will not cooperate. If, however, cross traffic is inelastic, then one can use a suitable delay-sensitive congestion control algorithm, which can control delays, but which would have obtained dismal throughput when run concurrently with a buffer-filling algorithm.We use the elasticity detector to demonstrate a congestion control framework that always achieves high utilization, but which can also achieve low delays when cross traffic permits it. The technique uses an asymmetric sinusoidal pulse patternand estimates elasticity by computing the frequency response(FFT) of the cross traffic estimate; we have measured its accuracy to be over 90\%. We have developed Nimbus, a protocol that explicitly switches between TCP-competitive and delay-sensitive modes using the elasticity detector. Our results on emulated and real-world paths show that Nimbus achieves throughput comparable to or better than Cubic always, but with delays that are much lower when cross traffic is inelastic. Unlike BBR, Nimbus is fair to Cubic, and has significantly lower delay in all cases; for example, on real-world paths, Nimbus has 11\% lower throughput but at 40-50 ms lower packet delay.},
+booktitle = {Proceedings of the Applied Networking Research Workshop},
+pages = {75},
+numpages = {1},
+location = {Montreal, QC, Canada},
+series = {ANRW '18}
+}
+
+# alternate url
+# https://www.usenix.org/system/files/conference/atc18/atc18-yan-francis.pdf
+# Andy file name:
+# 2018-yan-et-al-pantheon-the-training-ground-for-internet-congestion-control-research.pdf
+@inproceedings{YMHRe2018,
+author = {Yan, Francis Y. and Ma, Jestin and Hill, Greg D. and Raghavan, Deepti and Wahby, Riad S. and Levis, Philip and Winstein, Keith},
+title = {Pantheon: the training ground for internet congestion-control research},
+year = {2018},
+isbn = {9781931971447},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Internet transport algorithms are foundational to the performance of network applications. But a number of practical challenges make it difficult to evaluate new ideas and algorithms in a reproducible manner. We present the Pantheon, a system that addresses this by serving as a community "training ground" for research on Internet transport protocols and congestion control (https://pantheon.stanford.edu). It allows network researchers to benefit from and contribute to a common set of benchmark algorithms, a shared evaluation platform, and a public archive of results.We present three results showing the Pantheon's value as a research tool. First, we describe a measurement study from more than a year of data, indicating that congestion-control schemes vary dramatically in their relative performance as a function of path dynamics. Second, the Pantheon generates calibrated network emulators that capture the diverse performance of real Internet paths. These enable reproducible and rapid experiments that closely approximate real-world results. Finally, we describe the Pantheon's contribution to developing new congestion-control schemes, two of which were published at USENIX NSDI 2018, as well as data-driven neural-network-based congestion-control schemes that can be trained to achieve good performance over the real Internet.},
+booktitle = {Proceedings of the 2018 USENIX Conference on Usenix Annual Technical Conference},
+pages = {731–743},
+numpages = {13},
+location = {Boston, MA, USA},
+series = {USENIX ATC '18}
+}

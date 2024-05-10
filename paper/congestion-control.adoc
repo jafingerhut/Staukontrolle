@@ -66,27 +66,27 @@ research papers and descriptions of their contents
 
 | ? | cite:[ZEFGe2015]
 
-//| ? | cite:[LPJMH2015]
+| ? | cite:[LPJMH2015]
 
-//| Karuna | cite:[CCBA2016]
+| Karuna | cite:[CCBA2016]
 
-//| BBR | cite:[CCGY2016]
+| BBR | cite:[CCGY2016]
 
-//| NDP | cite:[HRAV2017]
+| NDP | cite:[HRAV2017]
 
-//| ExpressPass | cite:[CJH2017]
+| ExpressPass | cite:[CJH2017]
 
-//| Hotcocoa | cite:[AGRW2017]
+| Hotcocoa | cite:[AGRW2017]
 
-//| ? | cite:[GAB2017]
+| ? | cite:[GAB2017]
 
-//| Homa | cite:[MLAO2018]
+| Homa | cite:[MLAO2018]
 
-//| Copa | cite:[AB2018]
+| Copa | cite:[AB2018]
 
-//| ? | cite:[GNCR2018]
+| ? | cite:[GNCR2018]
 
-//| Pantheon | cite:[YMHR2018]
+| Pantheon | cite:[YMHR2018]
 
 |===
 
