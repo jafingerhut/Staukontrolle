@@ -61,7 +61,7 @@ research papers and descriptions of their contents
 
 | Presto | cite:[HRAFe2015] |
 
-| TIMELY | cite:[MLDBe2015] |
+| TIMELY | cite:[MLDBe2015] | Transport Informed by MEasurement of LatencY
 
 | PCC. (see also PCC Vivace paper?) | cite:[DLZGS2015] |
 
@@ -94,6 +94,155 @@ research papers and descriptions of their contents
 | formal methods | cite:[AASAB2021] | Applies formal verification methods to some congestion control algorithms.
 
 |===
+
+
+== Performance metrics of congestion control algorithms
+
+While different authors often have common metrics for evaluating
+performance, the differences can impact the algorithms and the results
+greatly.
+
+* Throughput
+  * Some techniques are known _not_ to be able to fully utilize
+    bottlneck link bandwidths, by design.  TODO: Give examples.
+* Latency
+  * Packet latency is the simplest form, but not necessarily the most
+    important, as it might be desirable to optimize latency for short
+    application-level messages more so than for long application-level
+    messages.
+  * Latency of application-level messages, rather than packets.
+    Sometimes called "flow completion time".
+  * Common statistics analyzed are average, median (50th percentile),
+    99th percentile.  TODO: See paper "The Tail at Scale" for some
+    examples of why 99th percentile is of interest, and ways to reduce
+    99th percentile application level message latency in a large
+    distributed system.
+  * TODO: Verify whether "tail latency" is used consistently or not.
+    In the TIMELY paper it seems to mean "99th percentile of RTT".
+* Fairness of throughput among competing flows
+  * Not everyone agrees that this is a goal, but it is commonly stated
+    as desired.  TODO: Find papers by Kelly or others that critique
+    flow-based fairness as a goal.
+
+
+== Summaries of papers
+
+=== DCQCN
+
+References: cite:[ZEFGe2015]
+
+Quote: "It would be interesting to compare the performance of DCQCN
+and TIMELY under various scenarios."  At least as of the time this
+paper was written, that comparison had not been done.  TODO: Did
+someone make such a comparison later?
+
+Primary goals:
+
+. Function over lossless (via PFC), L3 routed, datacenter networks.
+. Incur low CPU overhead on end hosts (thus RDMA implemented in NIC).
+. Provide hyper-fast start in the common case of no congestion,
+  i.e. slow start is not acceptable.
+
+Main components:
+
+* Switches implement PFC, and also ECN marking if packets exceed a
+  threshold, with a curve for marking probability.
+  * It was not clear from my reading whether they assume/require that
+    ECN marking is done on packets as they are dequeued from a deep
+    queue, or at enqueue.
+* Congestion signaled by receivers to senders in congestion
+  notification packets.
+* Sender uses per flow rate control, and maintains a few bytes of
+  state per flow, increasing the rate as time passes without CNPs, or
+  reducing the rate on receiving CNPs.
+* Starting rates are always fast, in hopes of no congestion.  PFC will
+  slow sender down if necessary in the short term.  They have
+  experimental results of DCQCN correct configured, misconfigured, and
+  with no PFC enabled, showing how poor the performance can be without
+  PFC (it is terribly low compared to with PFC).
+
+They survey existing TCP stacks and demonstrate with some experiments
+with careful measurements how it uses much more host CPU than RDMA.
+
+PFC alone with no form of congestion control leads to unfair
+throughput for different flows competing for a link, head-of-line
+blocking, congestion spreading behavior that can hurt flows that are
+_not_ competing for any congested link.
+
+Evaluation:
+
+* They have formulas for a fluid model of the system.  I have not seen
+  this in many other congestion control papers.  I do not understand
+  it fully yet.
+* They use experiments on real hardware, and compare in a few
+  micro-benchmarks to show that the fluid model agrees pretty closely
+  with experimental results.
+
+Key insights:
+
+* If appropriate congestion control is applied on a per-flow basis,
+  PFC will be rarely triggered, and thus the problems described
+  earlier will be avoided.
+
+* DCQCN uses the blunt, but fast PFC flow control to prevent packet
+  losses just in time, and uses a fine-grained and slower end-to-end
+  congestion control to adjust sending rate to avoid triggering PFC
+  persistently.  The combination allows DCQCN to be both responsive in
+  the short term, and stable over long term.
+
+Other aspects of the work:
+
+* commercial implementation on particular model of Mellanox NICs and
+  Arista Ethernet switch
+
+
+=== TIMELY
+
+References: cite:[MLDBe2015]
+
+I believe DCQCN was published slightly later, so authors do not
+compare TIMELY to it.
+
+Properties of an ideal congestion signal:
+
+* It is fine-grained and timely, to quickly inform senders about the
+  extent of congestion.
+* It would be discriminative enough to work in complex environments
+  with _multiple traffic classes_.  (ECN marking based on only the
+  packet's queue depth is not good for this, if the packet is not in
+  the strictly highest priority of network traffic.)
+
+They claim that accurate micro-second precision RTT measurements are a
+good answer to this problem.  They show with some experiments that
+measuring with this accuracy in the host kernel has approximately 100
+microsec of random noise added in, which is too large relative to the
+RTT variations caused by network device congestion to be a useful
+signal.  Their answer is to do RTT measurement and ACK offload in NIC
+hardware, eliminating the extra random latency caused by NIC-to-host
+interaction and kernel software response times.
+
+They show with experiments that the congestion signal "fraction of
+ECN-marked packets" is poorly correlated with RTT, with lots of noise
+(Figure 3).
+
+It is important to give higher priority to ACK packets if the reverse
+paths are congested with data.  This makes RTT measurements much
+closer to a measure of latency in the forward path.
+
+Main components:
+
+* Switches need not implement ECN, because NICs measure RTT.  Switches
+  do give higher priority to ACK packets, to make RTT measurement
+  correspond more closely to data packet queueing latency in forward
+  direction.
+* Receivers use ACK offload to eliminate variation of response latency
+  that receiver's kernel would add.
+* Sender uses per flow rate control, calculating an estimate of the
+  first derivativa of RTT as a function of time, called "gradient" in
+  the paper.  Positive gradient indicates growing latency/queues,
+  negative gradient indicates decreasing latency/queues.  Increase
+  rate if gradient is negative, decrease it if positive.  (Algorithm 1
+  in paper).
 
 
 == References
