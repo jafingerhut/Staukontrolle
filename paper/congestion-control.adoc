@@ -10,83 +10,83 @@ research papers and descriptions of their contents
 
 == Introduction
 
-[.center,cols="1,3",width=70%]
+[.center,cols="1,3,3",width=100%]
 |===
-| Algorithm | Reference
+| Algorithm | Reference | Full algorithm name
 
-| TCP Vegas | cite:[BOP1994]
+| TCP Vegas | cite:[BOP1994] |
 
-| TCP Vegas | cite:[BP1995]
+| TCP Vegas | cite:[BP1995] |
 
-| ? | cite:[Hoe1996]
+| ? | cite:[Hoe1996] |
 
-| CUBIC | cite:[HRX2008]
+| CUBIC | cite:[HRX2008] | the word "cubic", not an acronym
 
-| DCTCP | cite:[AGMPe2010]
+| DCTCP | cite:[AGMPe2010] | DataCenter TCP
 
-| QCN | cite:[KAYPP2010]
+| AF-QCN | cite:[KAYPP2010] | Approximate Fairness with Quantized Congestion Notification
 
-| D3 | cite:[WBKR2011]
+| D3 | cite:[WBKR2011] |
 
-| ? | cite:[WRGH2011]
+| ? | cite:[WRGH2011] |
 
-| DCTCP | cite:[AJP2011]
+| DCTCP | cite:[AJP2011] | DataCenter TCP
 
-| HULL | cite:[AKEPe2012]
+| HULL | cite:[AKEPe2012] | High-bandwidth Ultra-Low Latency
 
-| PDQ | cite:[HCG2012]
+| PDQ | cite:[HCG2012] |
 
-| D2TCP | cite:[VHV2012]
+| D2TCP | cite:[VHV2012] |
 
-| ? | cite:[HCG2012]
+| ? | cite:[HCG2012] |
 
-| pFabric | cite:[AYSKe2013]
+| pFabric | cite:[AYSKe2013] |
 
-| ? | cite:[WB2013]
+| ? | cite:[WB2013] |
 
-| ? | cite:[WSB2013]
+| ? | cite:[WSB2013] |
 
-| CONGA | cite:[AEDVe2014]
+| CONGA | cite:[AEDVe2014] | CONGestion Aware balancing
 
-| FastPass | cite:[POBSF2014]
+| FastPass | cite:[POBSF2014] |
 
-| FlowBender | cite:[KVHD2014]
+| FlowBender | cite:[KVHD2014] |
 
-| pHost | cite:[GNKAe2015]
+| pHost | cite:[GNKAe2015] |
 
-| PIAS | cite:[BCCHe2015]
+| PIAS | cite:[BCCHe2015] |
 
-| QJUMP | cite:[GSGWe2015]
+| QJUMP | cite:[GSGWe2015] |
 
-| Presto | cite:[HRAFe2015]
+| Presto | cite:[HRAFe2015] |
 
-| TIMELY | cite:[MLDBe2015]
+| TIMELY | cite:[MLDBe2015] |
 
-| PCC. (see also PCC Vivace paper?) | cite:[DLZGS2015]
+| PCC. (see also PCC Vivace paper?) | cite:[DLZGS2015] |
 
-| ? | cite:[ZEFGe2015]
+| DCQCN | cite:[ZEFGe2015] | DataCenter Quantized Congestion Notification
 
-| ? | cite:[LPJMH2015]
+| ? | cite:[LPJMH2015] |
 
-| Karuna | cite:[CCBA2016]
+| Karuna | cite:[CCBA2016] |
 
-| BBR | cite:[CCGY2016]
+| BBR | cite:[CCGYJ2016] | Bottleneck Bandwidth and Round-trip propagation time
 
-| NDP | cite:[HRAV2017]
+| NDP | cite:[HRAVe2017] | New Datacenter Protocol ??
 
-| ExpressPass | cite:[CJH2017]
+| ExpressPass | cite:[CJH2017] |
 
-| Hotcocoa | cite:[AGRW2017]
+| Hotcocoa | cite:[AGRW2017] |
 
-| ? | cite:[GAB2017]
+| ? | cite:[GAB2017] |
 
-| Homa | cite:[MLAO2018]
+| Homa | cite:[MLAO2018] |
 
-| Copa | cite:[AB2018]
+//| Copa | cite:[AB2018] |
 
-| ? | cite:[GNCR2018]
+| ? | cite:[GNCRe2018] |
 
-| Pantheon | cite:[YMHR2018]
+| Pantheon | cite:[YMHRe2018] |
 
 |===
 
