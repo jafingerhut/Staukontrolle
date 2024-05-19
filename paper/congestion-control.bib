@@ -748,3 +748,374 @@ keywords = {formal verification, congestion control, WAN transport},
 location = {Virtual Event, USA},
 series = {SIGCOMM '21}
 }
+
+# Andy file name:
+# 1998-stoica-et-al-core-stateless-fair-queueing-achieving-approximately-fair-bandwidth-allocations-in-high-speed-networks.pdf
+@inproceedings{SSZ1998,
+author = {Stoica, Ion and Shenker, Scott and Zhang, Hui},
+title = {Core-stateless fair queueing: achieving approximately fair bandwidth allocations in high speed networks},
+year = {1998},
+isbn = {1581130031},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/285237.285273},
+doi = {10.1145/285237.285273},
+abstract = {Router mechanisms designed to achieve fair bandwidth allocations, like Fair Queueing, have many desirable properties for congestion control in the Internet. However, such mechanisms usually need to maintain state, manage buffers, and/or perform packet scheduling on a per flow basis, and this complexity may prevent them from being cost-effectively implemented and widely deployed. In this paper, we propose an architecture that significantly reduces this implementation complexity yet still achieves approximately fair bandwidth allocations. We apply this approach to an island of routers --- that is, a contiguous region of the network --- and we distinguish between edge routers and core routers. Edge routers maintain per flow state; they estimate the incoming rate of each flow and insert a label into each packet header based on this estimate. Core routers maintain no per flow state; they use FIFO packet scheduling augmented by a probabilistic dropping algorithm that uses the packet labels and an estimate of the aggregate traffic at the router. We call the scheme Core-Stateless Fair Queueing. We present simulations and analysis on the performance of this approach, and discuss an alternate approach.},
+booktitle = {Proceedings of the ACM SIGCOMM '98 Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication},
+pages = {118–130},
+numpages = {13},
+location = {Vancouver, British Columbia, Canada},
+series = {SIGCOMM '98}
+}
+
+# alternate url
+# https://www.scss.tcd.ie/Doug.Leith/pubs/pfldnet2007_cubic_final.pdf
+# Andy file name:
+# 2008-leith-et-al-experimental-evaluation-of-cubic-tcp.pdf
+@inproceedings{LSM2008,
+       booktitle = {Proceedings of the 6th International Workshop on Protocols for Fast Long-Distance Networks (PFLDnet 2008) },
+           title = {Experimental evaluation of Cubic-TCP},
+          author = {Douglas J. Leith and Robert N. Shorten and G. McCullagh},
+            year = {2008},
+        keywords = {Cubic TCP algorithm; Transmission control protocol; Fairness; Networks; PFLDnet 2008; Hamilton Institute.},
+             url = {https://mural.maynoothuniversity.ie/1716/},
+        abstract = {In this paper we present an initial experimental evaluation of the recently proposed Cubic-TCP algorithm. Results are presented using a suite of benchmark tests that have been recently proposed in the literature [12], and a number of
+issues are of practical concern highlighted.}
+}
+
+# Andy file name:
+# 1997-mathis-et-al-the-macroscopic-behavior-of-the-tcp-congestion-avoidance-algorithm.pdf
+@article{MSMO1997,
+author = {Mathis, Matthew and Semke, Jeffrey and Mahdavi, Jamshid and Ott, Teunis},
+title = {The macroscopic behavior of the TCP congestion avoidance algorithm},
+year = {1997},
+issue_date = {July 1997},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {27},
+number = {3},
+issn = {0146-4833},
+url = {https://doi.org/10.1145/263932.264023},
+doi = {10.1145/263932.264023},
+abstract = {In this paper, we analyze a performance model for the TCP Congestion Avoidance algorithm. The model predicts the bandwidth of a sustained TCP connection subjected to light to moderate packet losses, such as loss caused by network congestion. It assumes that TCP avoids retransmission timeouts and always has sufficient receiver window and sender data. The model predicts the Congestion Avoidance performance of nearly all TCP implementations under restricted conditions and of TCP with Selective Acknowledgements over a much wider range of Internet conditions.We verify the model through both simulation and live Internet measurements. The simulations test several TCP implementations under a range of loss conditions and in environments with both drop-tail and RED queuing. The model is also compared to live Internet measurements using the TReno diagnostic and real TCP implementations.We also present several applications of the model to problems of bandwidth allocation in the Internet. We use the model to analyze networks with multiple congested gateways; this analysis shows strong agreement with prior work in this area. Finally, we present several important implications about the behavior of the Internet in the presence of high load from diverse user communities.},
+journal = {SIGCOMM Comput. Commun. Rev.},
+month = {jul},
+pages = {67–82},
+numpages = {16}
+}
+
+# Andy file name:
+# 2017-vanini-et-al-let-it-flow-resilient-asymmetric-load-balancing-with-flowlet-switching.pdf
+@inproceedings{VPATE2017,
+author = {Vanini, Erico and Pan, Rong and Alizadeh, Mohammad and Taheri, Parvin and Edsall, Tom},
+title = {Let it flow: resilient asymmetric load balancing with flowlet switching},
+year = {2017},
+isbn = {9781931971379},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Datacenter networks require efficient multi-path load balancing to achieve high bisection bandwidth. Despite much progress in recent years towards addressing this challenge, a load balancing design that is both simple to implement and resilient to network asymmetry has remained elusive. In this paper, we show that flowlet switching, an idea first proposed more than a decade ago, is a powerful technique for resilient load balancing with asymmetry. Flowlets have a remarkable elasticity property: their size changes automatically based on traffic conditions on their path. We use this insight to develop LetFlow, a very simple load balancing scheme that is resilient to asymmetry. LetFlow simply picks paths at random for flowlets and lets their elasticity naturally balance the traffic on different paths. Our extensive evaluation with real hardware and packet-level simulations shows that LetFlow is very effective. Despite being much simpler, it performs significantly better than other traffic oblivious schemes like WCMP and Presto in asymmetric scenarios, while achieving average flow completions time within 10-20\% of CONGA in testbed experiments and 2\texttimes{} of CONGA in simulated topologies with large asymmetry and heavy traffic load.},
+booktitle = {Proceedings of the 14th USENIX Conference on Networked Systems Design and Implementation},
+pages = {407–420},
+numpages = {14},
+location = {Boston, MA, USA},
+series = {NSDI'17}
+}
+
+# Andy file name:
+# 2017-zhang-et-al-resilient-datacenter-load-balancing-in-the-wild.pdf
+@inproceedings{ZZBCC2017,
+author = {Zhang, Hong and Zhang, Junxue and Bai, Wei and Chen, Kai and Chowdhury, Mosharaf},
+title = {Resilient Datacenter Load Balancing in the Wild},
+year = {2017},
+isbn = {9781450346535},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3098822.3098841},
+doi = {10.1145/3098822.3098841},
+abstract = {Production datacenters operate under various uncertainties such as traffic dynamics, topology asymmetry, and failures. Therefore, datacenter load balancing schemes must be resilient to these uncertainties; i.e., they should accurately sense path conditions and timely react to mitigate the fallouts. Despite significant efforts, prior solutions have important drawbacks. On the one hand, solutions such as Presto and DRB are oblivious to path conditions and blindly reroute at fixed granularity. On the other hand, solutions such as CONGA and CLOVE can sense congestion, but they can only reroute when flowlets emerge; thus, they cannot always react timely to uncertainties. To make things worse, these solutions fail to detect/handle failures such as blackholes and random packet drops, which greatly degrades their performance.In this paper, we introduce Hermes, a datacenter load balancer that is resilient to the aforementioned uncertainties. At its heart, Hermes leverages comprehensive sensing to detect path conditions including failures unattended before, and it reacts using timely yet cautious rerouting. Hermes is a practical edge-based solution with no switch modification. We have implemented Hermes with commodity switches and evaluated it through both testbed experiments and large-scale simulations. Our results show that Hermes achieves comparable performance to CONGA and Presto in normal cases, and well handles uncertainties: under asymmetries, Hermes achieves up to 10\% and 20\% better flow completion time (FCT) than CONGA and CLOVE; under switch failures, it outperforms all other schemes by over 32\%.},
+booktitle = {Proceedings of the Conference of the ACM Special Interest Group on Data Communication},
+pages = {253–266},
+numpages = {14},
+keywords = {Datacenter fabric, Distributed, Load balancing},
+location = {Los Angeles, CA, USA},
+series = {SIGCOMM '17}
+}
+
+# Andy file name:
+# 2019-li-et-al-hpcc-high-precision-congestion-control.pdf
+@inproceedings{LMLZe2019,
+author = {Li, Yuliang and Miao, Rui and Liu, Hongqiang Harry and Zhuang, Yan and Feng, Fei and Tang, Lingbo and Cao, Zheng and Zhang, Ming and Kelly, Frank and Alizadeh, Mohammad and Yu, Minlan},
+title = {HPCC: high precision congestion control},
+year = {2019},
+isbn = {9781450359566},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3341302.3342085},
+doi = {10.1145/3341302.3342085},
+abstract = {Congestion control (CC) is the key to achieving ultra-low latency, high bandwidth and network stability in high-speed networks. From years of experience operating large-scale and high-speed RDMA networks, we find the existing high-speed CC schemes have inherent limitations for reaching these goals. In this paper, we present HPCC (High Precision Congestion Control), a new high-speed CC mechanism which achieves the three goals simultaneously. HPCC leverages in-network telemetry (INT) to obtain precise link load information and controls traffic precisely. By addressing challenges such as delayed INT information during congestion and overreac-tion to INT information, HPCC can quickly converge to utilize free bandwidth while avoiding congestion, and can maintain near-zero in-network queues for ultra-low latency. HPCC is also fair and easy to deploy in hardware. We implement HPCC with commodity programmable NICs and switches. In our evaluation, compared to DCQCN and TIMELY, HPCC shortens flow completion times by up to 95\%, causing little congestion even under large-scale incasts.},
+booktitle = {Proceedings of the ACM Special Interest Group on Data Communication},
+pages = {44–58},
+numpages = {15},
+keywords = {smart NIC, programmable switch, congestion control, RDMA},
+location = {Beijing, China},
+series = {SIGCOMM '19}
+}
+
+# alternate url
+# https://www.cs.cornell.edu/~ragarwal/pubs/network-stack.pdf
+# Andy file name:
+# 2021-cai-et-al-understanding-host-network-stack-overheads.pdf
+@inproceedings{CCVHA2021,
+author = {Cai, Qizhe and Chaudhary, Shubham and Vuppalapati, Midhul and Hwang, Jaehyun and Agarwal, Rachit},
+title = {Understanding host network stack overheads},
+year = {2021},
+isbn = {9781450383837},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3452296.3472888},
+doi = {10.1145/3452296.3472888},
+abstract = {Traditional end-host network stacks are struggling to keep up with rapidly increasing datacenter access link bandwidths due to their unsustainable CPU overheads. Motivated by this, our community is exploring a multitude of solutions for future network stacks: from Linux kernel optimizations to partial hardware offload to clean-slate userspace stacks to specialized host network hardware. The design space explored by these solutions would benefit from a detailed understanding of CPU inefficiencies in existing network stacks.This paper presents measurement and insights for Linux kernel network stack performance for 100Gbps access link bandwidths. Our study reveals that such high bandwidth links, coupled with relatively stagnant technology trends for other host resources (e.g., CPU speeds and capacity, cache sizes, NIC buffer sizes, etc.), mark a fundamental shift in host network stack bottlenecks. For instance, we find that a single core is no longer able to process packets at line rate, with data copy from kernel to application buffers at the receiver becoming the core performance bottleneck. In addition, increase in bandwidth-delay products have outpaced the increase in cache sizes, resulting in inefficient DMA pipeline between the NIC and the CPU. Finally, we find that traditional loosely-coupled design of network stack and CPU schedulers in existing operating systems becomes a limiting factor in scaling network stack performance across cores. Based on insights from our study, we discuss implications to design of future operating systems, network protocols, and host hardware.},
+booktitle = {Proceedings of the 2021 ACM SIGCOMM 2021 Conference},
+pages = {65–77},
+numpages = {13},
+keywords = {datacenter networks, host network stacks, network hardware},
+location = {Virtual Event, USA},
+series = {SIGCOMM '21}
+}
+
+# Andy file name:
+# 2022-wang-et-al-predictable-vfabric-on-informative-data-plane.pdf
+@inproceedings{WGQLe2022,
+author = {Wang, Shuai and Gao, Kaihui and Qian, Kun and Li, Dan and Miao, Rui and Li, Bo and Zhou, Yu and Zhai, Ennan and Sun, Chen and Gao, Jiaqi and Zhang, Dai and Fu, Binzhang and Kelly, Frank and Cai, Dennis and Liu, Hongqiang Harry and Zhang, Ming},
+title = {Predictable vFabric on informative data plane},
+year = {2022},
+isbn = {9781450394208},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3544216.3544241},
+doi = {10.1145/3544216.3544241},
+abstract = {In multi-tenant data centers, each tenant desires reassuring predictability from the virtual network fabric - bandwidth guarantee, work conservation, and bounded tail latency. Achieving these goals simultaneously relies on rapid and precise traffic admission. However, the slow convergence (tens of milliseconds) of prior works can hardly satisfy the increasingly rigorous performance demand under dynamic traffic patterns. Further, state-of-the-art load balance schemes are all guarantee-agnostic and bring great risks on breaking bandwidth guarantee, which is overlooked in prior works.In this paper, we propose μFab, a predictable virtual fabric solution which can (1) explicitly select proper paths for all flows and (2) converge to ideal bandwidth allocation at sub-millisecond timescales. The core idea of μFab is to leverage the programmable data plane to build a fusion of an active edge (e.g., NIC) and an informative core (e.g., switch), where the core sends link status and tenant information to the edge via telemetry to help the latter make a timely and accurate decision on path selection and traffic admission. We fully implement μFab with commodity SmartNICs and programmable switches. Evaluations show that μFab can keep minimum bandwidth guarantee with high bandwidth utilization and near-optimal transmission latency in various network situations with limited probing bandwidth overhead. Application-level experiments, e.g., compute and storage scenarios, show that μFab can improve QPS by 2.5\texttimes{} and cut tail latency by more than 21\texttimes{} compared to the alternatives.},
+booktitle = {Proceedings of the ACM SIGCOMM 2022 Conference},
+pages = {615–632},
+numpages = {18},
+keywords = {programmable data plane, performance isolation},
+location = {Amsterdam, Netherlands},
+series = {SIGCOMM '22}
+}
+
+# Andy file name:
+# 2022-ghabashneh-et-al-a-microscopic-view-of-bursts-buffer-contention-and-loss-in-data-centers.pdf
+@inproceedings{GZLSe2022,
+author = {Ghabashneh, Ehab and Zhao, Yimeng and Lumezanu, Cristian and Spring, Neil and Sundaresan, Srikanth and Rao, Sanjay},
+title = {A microscopic view of bursts, buffer contention, and loss in data centers},
+year = {2022},
+isbn = {9781450392594},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3517745.3561430},
+doi = {10.1145/3517745.3561430},
+abstract = {Managing data center networks with low loss requires understanding traffic dynamics at short (millisecond) time-scales, especially the burstiness of traffic, and to what extent bursts contend for switch buffer resources. Yet, monitoring traffic over such intervals is a challenge at scale.We make two contributions. First, we present Millisampler, a lightweight traffic characterization tool deployed across all Meta hosts. Millisampler takes a host-centric perspective to data collection, which is scalable and allows for correlating traffic patterns with transport layer statistics. Further, simultaneous collection of Millisampler data across servers in a rack enables analysis of how synchronized traffic interacts in rack buffers. In particular, we study contention, which occurs when multiple bursts arrive simultaneously at the dynamically shared rack buffer.Second, we present a data-center-scale analysis of contention, including a unique joint analysis of burstiness, contention, and loss.Our results show (i) contention characteristics vary widely across and within a region and is influenced by service placement; (ii) contention varies significantly over short time-scales; (iii) bursts are likely to encounter some contention; and (iv) higher contention need not lead to more loss, and the interplay with workload and burst properties matters. We discuss implications for data center design including service placement, buffer sharing algorithms and congestion control.},
+booktitle = {Proceedings of the 22nd ACM Internet Measurement Conference},
+pages = {567–580},
+numpages = {14},
+location = {Nice, France},
+series = {IMC '22}
+}
+
+# Andy file name:
+# 2022-qureshi-et-al-plb-congestion-signals-are-simple-and-effective-for-network-load-balancing.pdf
+@inproceedings{QCYFe2022,
+author = {Qureshi, Mubashir Adnan and Cheng, Yuchung and Yin, Qianwen and Fu, Qiaobin and Kumar, Gautam and Moshref, Masoud and Yan, Junhua and Jacobson, Van and Wetherall, David and Kabbani, Abdul},
+title = {PLB: congestion signals are simple and effective for network load balancing},
+year = {2022},
+isbn = {9781450394208},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3544216.3544226},
+doi = {10.1145/3544216.3544226},
+abstract = {We present a new, host-based design for link load balancing and report the first experiences of link imbalance in datacenters. Our design, PLB (Protective Load Balancing), builds on transport protocols and ECMP/WCMP to reduce network hotspots. PLB randomly changes the paths of connections that experience congestion, preferring to repath after idle periods to minimize packet reordering. It repaths a connection by changing the IPv6 Flow Label on its packets, which switches include as part of ECMP/WCMP. Across hosts, this action drives down hotspots in the network, and lowers the latency of RPCs.PLB is used fleetwide at Google for TCP and Pony Express traffic. We could deploy it when other designs were infeasible because PLB requires only small transport modifications and switch configuration changes, and is backwards-compatible. It has produced excellent gains: the median utilization imbalance of highly-loaded ToR uplinks in Google datacenters fell by 60\%, packet drops correspondingly fell by 33\%, and the tail latency (99p) of small RPCs fell by 20\%. PLB is also a general solution that works for settings from datacenters to backbone networks, as well as different transports.},
+booktitle = {Proceedings of the ACM SIGCOMM 2022 Conference},
+pages = {207–218},
+numpages = {12},
+keywords = {congestion control, datacenter fabric, distributed, load balancing},
+location = {Amsterdam, Netherlands},
+series = {SIGCOMM '22}
+}
+
+# alternate url
+# https://web-backend.simula.no/sites/default/files/publications/files/pi2_conext.pdf
+# Andy file name:
+# 2016-de-schepper-et-al-pi2-a-linearized-aqm-for-both-classic-and-scalable-tcp.pdf
+@inproceedings{DBTB2016,
+author = {De Schepper, Koen and Bondarenko, Olga and Tsang, Ing-Jyh and Briscoe, Bob},
+title = {PI2: A Linearized AQM for both Classic and Scalable TCP},
+year = {2016},
+isbn = {9781450342926},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2999572.2999578},
+doi = {10.1145/2999572.2999578},
+abstract = {This paper concerns the use of Active Queue Management (AQM) to reduce queuing delay. It offers insight into why it has proved hard for a Proportional Integral (PI) controller to remain both responsive and stable while controlling `Classic' TCP flows, such as TCP Reno and Cubic. Due to their non-linearity, the controller's adjustments have to be smaller when the target drop probability is lower. The PI Enhanced (PIE) algorithm attempts to solve this problem by scaling down the adjustments of the controller using a look-up table. Instead, we control an internal variable that is by definition linearly proportional to the load, then post-process it into the required Classic drop probability---in fact we show that the output simply needs to be squared. This allows tighter control, giving responsiveness and stability better or no worse than PIE achieves, but without all its corrective heuristics.Additionally, with suitable packet classification, it becomes simple to extend this PI2 AQM to support coexistence between Classic and Scalable congestion controls in the public Internet. Unlike a Classic congestion control, a Scalable congestion control ensures sufficient feedback at any flow rate, an example being Data Centre TCP (DCTCP). A Scalable control is linear, so we can use the internal variable directly without any squaring, by omitting the post-processing stage.We implemented this PI2 AQM as a Linux qdisc to extensively test our claims using Classic and Scalable TCPs.},
+booktitle = {Proceedings of the 12th International on Conference on Emerging Networking EXperiments and Technologies},
+pages = {105–119},
+numpages = {15},
+keywords = {algorithms, aqm, congestion control, fairness, latency, qos, scalability, scheduling, starvation, tcp, testbed evaluation},
+location = {Irvine, California, USA},
+series = {CoNEXT '16}
+}
+
+# Andy file name:
+# 2015-de-schepper-et-al-data-centre-to-the-home-ultra-low-latency-for-all.pdf
+@misc{DBTB2015,
+  keywords = {Evaluation, congestion control, latency, tcp, Internet, AQM, networks, Data Communication, QoS, Performance, Congestion Avoidance, Algorithms, Design, Analysis, Scaling},
+  author = {Koen De Schepper and Olga Bondarenko and Inton Tsang and Bob Briscoe},
+  title = {{\textquoteleft}Data Center to the Home{\textquoteright}:  Ultra-Low  Latency for All},
+  year = {2015},
+  month = {06/2015},
+  publisher = {RITE Project},
+  url = {http://riteproject.eu/publications/},
+}
+
+# Andy file name:
+# 2015-briscoe-et-al-scaling-tcps-congestion-window-for-small-round-trip-times.pdf
+@article{BD2019,
+  author       = {Bob Briscoe and
+                  Koen De Schepper},
+  title        = {Scaling TCP's Congestion Window for Small Round Trip Times},
+  journal      = {CoRR},
+  volume       = {abs/1904.07598},
+  year         = {2019},
+  url          = {http://arxiv.org/abs/1904.07598},
+  eprinttype    = {arXiv},
+  eprint       = {1904.07598},
+  timestamp    = {Fri, 26 Apr 2019 13:18:53 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-1904-07598.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+# alternate url
+# https://www.academia.edu/10305026/Rate_control_for_communication_networks_shadow_prices_proportional_fairness_and_stability
+# Andy file name:
+# 1998-kelly-et-al-rate-control-for-communication-networks-shadow-prices-proportional-fairness-and-stbility.pdf
+@article{KMT1998,
+author = {F. P. Kelly, A. K. Maulloo, and D. K. H. Tan},
+title = {Rate control for communication networks: shadow prices, proportional fairness and stability},
+journal = {Journal of the Operational Research Society},
+volume = {49},
+number = {3},
+pages = {237--252},
+year = {1998},
+publisher = {Taylor \& Francis},
+doi = {10.1057/palgrave.jors.2600523},
+URL = {https://doi.org/10.1057/palgrave.jors.2600523},
+eprint = {https://doi.org/10.1057/palgrave.jors.2600523}
+}
+
+# alternate url
+# https://www.statslab.cam.ac.uk/~frank/elastic.pdf?ref=blog.anoma.net
+# Andy file name:
+# 1997-kelly-charging-and-rate-control-for-elastic-traffic.pdf
+@article{Kell1997,
+author = {Kelly, Frank},
+title = {Charging and rate control for elastic traffic},
+journal = {European Transactions on Telecommunications},
+volume = {8},
+number = {1},
+pages = {33-37},
+doi = {https://doi.org/10.1002/ett.4460080106},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.4460080106},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/ett.4460080106},
+abstract = {Abstract This paper addresses the issues of charging, rate control and routing for a communication network carrying elastic traffic, such as an ATM network offering an available bit rate service. A model is described from which max-min fairness of rates emerges as a limiting special case; more generally, the charges users are prepared to pay influence their allocated rates. In the preferred version of the model, a user chooses the charge per unit time that the user will pay; thereafter the user's rate is determined by the network according to a proportional fairness criterion applied to the rate per unit charge. A system optimum is achieved when users' choices of charges and the network's choice of allocated rates are in equilibrium.},
+year = {1997}
+}
+
+# slides from a talk on this topic:
+# https://www.bobbriscoe.net/presents/0611ietf/0611briscoe-fair-tsvarea.pdf
+# alternate url
+# https://www.researchgate.net/publication/220194938_Flow_Rate_Fairness_Dismantling_a_Religion
+# Andy file name:
+# 2007-briscoe-flow-rate-fairness-dismantling-a-religion.pdf 
+@article{Bris2007,
+author = {Briscoe, Bob},
+title = {Flow rate fairness: dismantling a religion},
+year = {2007},
+issue_date = {April 2007},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {37},
+number = {2},
+issn = {0146-4833},
+url = {https://doi.org/10.1145/1232919.1232926},
+doi = {10.1145/1232919.1232926},
+abstract = {Resource allocation and accountability keep reappearing on every list of requirements for the Internet architecture. The reason we never resolve these issues is a broken idea of what the problem is. The applied research and standards communities are using completely unrealistic and impractical fairness criteria. The resulting mechanisms don't even allocate the right thing and they don't allocate it between the right entities. We explain as bluntly as we can that thinking about fairness mechanisms like TCP in terms of sharing out flow rates has no intellectual heritage from any concept of fairness in philosophy or social science, or indeed real life. Comparing flow rates should never again be used for claims of fairness in production networks. Instead, we should judge fairness mechanisms on how they share out the 'cost' of each user's actions on others},
+journal = {SIGCOMM Comput. Commun. Rev.},
+month = {mar},
+pages = {63–74},
+numpages = {12},
+keywords = {resource allocation, identity, fairness, congestion control, accountability}
+}
+
+# alternate url
+# https://people.eecs.berkeley.edu/~istoica/classes/cs268/10/papers/afd.pdf
+# Andy file name:
+# 2003-pan-et-al-approximate-fairness-through-differential-dropping.pdf
+@article{PBPS2003,
+author = {Pan, Rong and Breslau, Lee and Prabhakar, Balaji and Shenker, Scott},
+title = {Approximate fairness through differential dropping},
+year = {2003},
+issue_date = {April 2003},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {33},
+number = {2},
+issn = {0146-4833},
+url = {https://doi.org/10.1145/956981.956985},
+doi = {10.1145/956981.956985},
+abstract = {Many researchers have argued that the Internet architecture would be more robust and more accommodating of heterogeneity if routers allocated bandwidth fairly. However, most of the mechanisms proposed to accomplish this, such as Fair Queueing [16, 6] and its many variants [2, 23, 15], involve complicated packet scheduling algorithms. These algorithms, while increasingly common in router designs, may not be inexpensively implementable at extremely high speeds; thus, finding more easily implementable variants of such algorithms may be of significant practical value. This paper proposes an algorithm called Approximate Fair Dropping (AFD), which bases its dropping decisions on the recent history of packet arrivals. AFD retains a simple forwarding path and requires an amount of additional state that is small compared to current packet buffers. Simulation results, which we describe here, suggest that the design provides a reasonable degree of fairness in a wide variety of operating conditions. The performance of our approach is aided by the fact that the vast majority of Internet flows are slow but the fast flows send the bulk of the bits. This allows a small sample of recent history to provide accurate rate estimates of the fast flows.},
+journal = {SIGCOMM Comput. Commun. Rev.},
+month = {apr},
+pages = {23–39},
+numpages = {17}
+}
+
+# alternate url
+# https://www.cs.purdue.edu/homes/fahmy/papers/2020conext.pdf
+# Andy file name:
+# 2020-taheri-et-al-rocc-robust-congestion-control-for-rdma.pdf
+@inproceedings{TMVFe2020,
+author = {Taheri, Parvin and Menikkumbura, Danushka and Vanini, Erico and Fahmy, Sonia and Eugster, Patrick and Edsall, Tom},
+title = {RoCC: robust congestion control for RDMA},
+year = {2020},
+isbn = {9781450379489},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3386367.3431316},
+doi = {10.1145/3386367.3431316},
+abstract = {In this paper, we present RoCC, a robust congestion control approach for datacenter networks based on RDMA. RoCC leverages switch queue size as an input to a PI controller, which computes the fair data rate of flows in the queue, signaling it to the flow sources. The PI parameters are self-tuning to guarantee stability, rapid convergence, and fair and near-optimal throughput in a wide range of congestion scenarios. Our simulation and DPDK implementation results show that RoCC can achieve up to 7\texttimes{} reduction in PFC frames generated under high average load levels, compared to DCQCN. At the same time, RoCC can achieve up to 8\texttimes{} lower tail latency, compared to DCQCN and HPCC. We also find that RoCC does not require PFC. The functional components of RoCC are implementable in P4-based and fixed-function switch ASICs.},
+booktitle = {Proceedings of the 16th International Conference on Emerging Networking EXperiments and Technologies},
+pages = {17–30},
+numpages = {14},
+keywords = {network programmability, datacenter, congestion control, RDMA},
+location = {Barcelona, Spain},
+series = {CoNEXT '20}
+}
+
+# Andy file name:
+# 2017-shpiner-et-al-roce-rocks-without-pfc-detailed-evaluation.pdf
+@inproceedings{SZDBe2017,
+author = {Shpiner, Alexander and Zahavi, Eitan and Dahley, Omar and Barnea, Aviv and Damsker, Rotem and Yekelis, Gennady and Zus, Michael and Kuta, Eitan and Baram, Dean},
+title = {RoCE Rocks without PFC: Detailed Evaluation},
+year = {2017},
+isbn = {9781450350532},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3098583.3098588},
+doi = {10.1145/3098583.3098588},
+abstract = {In recent years, the usage of RDMA in data center networks has increased significantly, with RDMA over Converged Ethernet (RoCE) emerging as the canonical approach for deploying RDMA in Ethernet-based data centers. Initial implementations of RoCE required a lossless fabric for optimal performance. This is typically achieved by enabling Priority Flow Control (PFC) on Ethernet NICs and switches. The RoCEv2 specification introduced RoCE congestion control, which allows throttling the transmission rate in response to congestion. Consequently, packet loss is minimized and performance is maintained, even if the underlying Ethernet network is lossy.In this paper, we discuss the latest developments in RoCE congestion control. Hardware congestion control reduces the latency of the congestion control loop; it reacts promptly in the face of congestion by throttling the transmission rate quickly and accurately. The short control loop also prevents network buffers from overfilling under various congestion scenarios. In addition, fast hardware retransmission complements congestion control in severe congestion scenarios, by significantly reducing the performance penalty of packet drops. We survey architectural features that allow deployment of RoCE over lossy networks and present real lab test results.},
+booktitle = {Proceedings of the Workshop on Kernel-Bypass Networks},
+pages = {25–30},
+numpages = {6},
+keywords = {Congestion Control, Performance, RoCE},
+location = {Los Angeles, CA, USA},
+series = {KBNets '17}
+}
