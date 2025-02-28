@@ -21,7 +21,21 @@ research papers and descriptions of their contents
 
 | ? | cite:[Hoe1996] |
 
+| TCP | cite:[MSMO1997] | 
+
+| ? | cite:[Kell1997] |
+
+| ? | cite:[KMT1998] |
+
+| CSFQ | cite:[SSZ1998] | Core-stateless fair queueing
+
+| AFD | cite:[PBPS2003] | Approximate Fair Dropping
+
+| ? | cite:[Bris2007] |
+
 | CUBIC | cite:[HRX2008] | the word "cubic", not an acronym
+
+| CUBIC | @cite:[LSM2008] | CUBIC experimental analysis
 
 | DCTCP | cite:[AGMPe2010] | DataCenter TCP
 
@@ -69,9 +83,13 @@ research papers and descriptions of their contents
 
 | ? | cite:[LPJMH2015] |
 
+| L4S? | cite:[DBTB2015] |
+
 | Karuna | cite:[CCBA2016] |
 
 | BBR | cite:[CCGYJ2016] | Bottleneck Bandwidth and Round-trip propagation time
+
+| Pi^2^ | cite:[DBTB2016] | 
 
 | NDP | cite:[HRAVe2017] | New Datacenter Protocol ??
 
@@ -80,6 +98,12 @@ research papers and descriptions of their contents
 | Hotcocoa | cite:[AGRW2017] |
 
 | ? | cite:[GAB2017] |
+
+| Let it flow | cite:[VPATE2017] | 
+
+| ? | cite:[ZZBCC2017] |
+
+| ? | cite:[SZDBe2017] | RoCE without PFC
 
 | Homa | cite:[MLAO2018] |
 
@@ -91,7 +115,21 @@ research papers and descriptions of their contents
 
 | ? | cite:[NCRGe2018] |
 
+| HPCC | cite:[LMLZe2019] | High Precision Congestion Control
+
+| ? | cite:[BD2019] |
+
+| RoCC | cite:[TMVFe2020] | Robust Congestion Control (for RDMA)
+
+| host stack | cite:[CCVHA2021] | 
+
 | formal methods | cite:[AASAB2021] | Applies formal verification methods to some congestion control algorithms.
+
+| ? | cite:[WGQLe2022] |
+
+| micro bursts | cite:[GZLSe2022] |
+
+| PLB | cite:[QCYFe2022] | Protective Load Balancing
 
 |===
 
